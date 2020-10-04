@@ -1,0 +1,46 @@
+* {margin: 0;padding: 0;box-sizing: border-box;}
+html,body{height:100%;font-size: 16px;margin: 0!important;background: #fff;}
+body {font-family: syht_light,STHeiti,"MicrosoftJhengHei",华文细黑,"Microsoft YaHei",微软雅黑,MingLiu;font-size: 16px;line-height: 24px;width: 100%;overflow-x: hidden;}
+img {border: 0;max-width: 100%;}
+img[src=''],img:not([src]){opacity: 0;}
+a{text-decoration:none!important;}
+a button{text-decoration:none!important;}
+ul{list-style: none;}
+.left{float: left;}
+.right{float: right;}
+.block{display: block;}
+.clear {clear: both;margin: 0px;padding: 0px;display: block;}
+.hide{display: none;}
+.noindent{text-indent: 0!important;}
+.en{font-family: Arial;}
+p{margin: 0;}
+
+.CtaButton{-webkit-appearance: none;-moz-appearance: none;appearance: none;background: none;border: 2px solid transparent;border-bottom: none;border-right: none;cursor: pointer;display: inline-block;font-size: 14px;font-weight: 700;padding: 10px 60px 10px 22px;position: relative;text-decoration: none;transition: background 250ms, color 250ms;margin: 1rem 0;border-color:#a1cd1a;color: #a1cd1a;line-height: 2;}
+.CtaButton::before {bottom: 0;height: 2px;left: 0;-ms-transform: scaleX(0.77);transform: scaleX(0.77);-ms-transform-origin: 0 1px;transform-origin: 0 1px;width: 100%;}
+.CtaButton:hover {transition-delay: 250ms;}
+.CtaButton:hover::before,.CtaButton:hover::after {-ms-transform: scaleX(1);transform: scaleX(1);}
+.CtaButton::before, .CtaButton::after {content: '';display: block;position: absolute;transition: transform 200ms 200ms;background: #a1cd1a;}
+.CtaButton::after {height: 100%;right: 0;top: 0;-ms-transform: scaleY(0.6);transform: scaleY(0.6);-ms-transform-origin: 1px 0;transform-origin: 1px 0;width: 2px;}
+*, *::before, *::after {box-sizing: inherit;margin: 0;padding: 0;}
+.CtaButton:hover { background: #a1cd1a; color: #fff;}
+.CtaButton .CtaButton-arrow {position: absolute;right: 30px;top: -5px;}
+.DirectionalArrow--right {transform: rotate(-90deg) translatez(0);}
+.DirectionalArrow--right, .DirectionalArrow--left, .DirectionalArrow--down, .DirectionalArrow--up {display: inline-block;height: 18px;left: auto;vertical-align: middle;}
+.DirectionalArrow, .DirectionalArrow--right, .DirectionalArrow--left, .DirectionalArrow--down, .DirectionalArrow--up {color: inherit;display: block;height: 60px;outline: none;position: relative; width: 40px;}
+.DirectionalArrow::before {background: currentColor;bottom: 0;content: '';display: block;height: 40%;left: 19px;position: absolute;-ms-transform-origin: 50% 100%;transform-origin: 50% 100%;width: 2px;}
+.DirectionalArrow::after {border-right: solid 2px currentColor;bottom: 3px;content: '';display: block;height: 14px;left: 8px;position: absolute;transform: rotate(45deg) translatez(0);-ms-transform-origin: 50% 100%;transform-origin: 50% 100%;width: 14px;}
+.DirectionalArrow--right::after, .DirectionalArrow--left::after, .DirectionalArrow--down::after, .DirectionalArrow--up::after {bottom: 2px;height: 12px;left: 12px;width: 10px;}
+
+.elementor-32 .swiper-slide{text-align: center;position: relative;}
+.elementor-32 .swiper-slide-active:after{content: '';position: absolute;width: 50%;height: 2px;top: 35%;left: 50%;z-index: -1;background: #70ae2e;}
+.elementor-32 .swiper-slide-next:after{content: '';position: absolute;width: 100%;height: 2px;top: 35%;left: 0;z-index: -1;background: #70ae2e;}
+.elementor-32 .swiper-slide-next+.swiper-slide:after{content: '';position: absolute;width: 50%;height: 2px;top: 35%;left: 0;z-index: -1;background: #70ae2e;}
+.elementor-32 .swiper-slide a{width: 70%;display: inline-block;color: #70ae2e;font-size: 0.875rem;}
+.elementor-32 .swiper-slide a img{width: 5rem;margin: 0 auto 1rem;}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{background: url(../images/5.png);background-size: 100% 100%;}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{background: url(../images/4.png);background-size: 100% 100%;}
+
+.elementor-element-4b8ca70 .CtaButton{border-color:#fff;color: #fff;}
+.elementor-element-4b8ca70 .CtaButton:hover{color: #fff;background: #a1cd1a;}
+.elementor-element-4b8ca70 .CtaButton::before,.elementor-element-4b8ca70 .CtaButton::after {background: #fff;}
+.elementor video{height: auto!important;}
