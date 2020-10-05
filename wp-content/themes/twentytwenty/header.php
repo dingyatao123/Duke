@@ -21,8 +21,8 @@
 		<?php wp_head(); ?>
 		<link href="<?php bloginfo('template_directory'); ?>/assets/css/swiper.min.css" rel="stylesheet">
 		<link href="<?php bloginfo('template_directory'); ?>/assets/css/style.css" rel="stylesheet">
+    	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.5.1.min.js" type='text/javascript'></script>
     	<script src="<?php bloginfo('template_directory'); ?>/assets/js/swiper.min.js" type='text/javascript'></script>
-
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -33,75 +33,52 @@
 
 		<header id="site-header" class="header-footer-group" role="banner">
 			<div class="header-top">
-				<div class="left"><img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/1.png" /> 中国 <img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/2.png" /></div>
-				<div class="right">
-				<ul class="primary-menu reset-list-style">
-					<?php
-					if ( has_nav_menu( 'social' ) ) {
-						wp_nav_menu(
-							array(
-								'container'  => '',
-								'items_wrap' => '%3$s',
-								'theme_location' => 'social',
-							)
-						);
-
-					}
-					?>
-					</ul>
-					
-					<?php
-					// Check whether the header search is activated in the customizer.
-					$enable_header_search = get_theme_mod( 'enable_header_search', true );
-					if ( true === $enable_header_search || has_nav_menu( 'expanded' ) ) {
-						?>
-
-						<div class="header-toggles hide-no-js">
-
-						<?php
-						if ( has_nav_menu( 'expanded' ) ) {
-							?>
-
-							<div class="toggle-wrapper nav-toggle-wrapper has-expanded-menu">
-
-								<button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-									<span class="toggle-inner">
-										<span class="toggle-text"><?php _e( 'Menu', 'twentytwenty' ); ?></span>
-										<span class="toggle-icon">
-											<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
-										</span>
-									</span>
-								</button><!-- .nav-toggle -->
-
-							</div><!-- .nav-toggle-wrapper -->
-
+				<div class="cont">
+					<div class="lf">
+						<div><img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/1.png" /></div> 中国 <div><img class="sq" src="<?php bloginfo('template_directory'); ?>/assets/images/2.png" /></div>
+					</div>
+					<div class="rt">
+						<ul class="primary-menu reset-list-style">
 							<?php
-						}
+							if ( has_nav_menu( 'social' ) ) {
+								wp_nav_menu(
+									array(
+										'container'  => '',
+										'items_wrap' => '%3$s',
+										'theme_location' => 'social',
+									)
+								);
 
-						if ( true === $enable_header_search ) {
+							}
 							?>
+						</ul>
+						<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
+							<div><img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/3.png" /></div>
+							<input class="searchInput" type="text" value="搜索" name="s" id="s"/>
+						</form>
 
-							<div class="toggle-wrapper search-toggle-wrapper">
-
-								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
-									<span class="toggle-inner">
-										<?php twentytwenty_the_theme_svg( 'search' ); ?>
-										<span class="toggle-text"><?php _e( 'Search', 'twentytwenty' ); ?></span>
-									</span>
-								</button><!-- .search-toggle -->
-
-							</div>
-
-							<?php
-						}
-						?>
-
-						</div><!-- .header-toggles -->
-						<?php
-					}
-					?>
+						<script type="text/javascript">
+							$(document).ready(function(){
+								// 当鼠标聚焦在搜索框
+								$('#s').focus(
+									function() {
+										if($(this).val() == '搜索') {
+											$(this).val('').css({color:"#454545"});
+										}
+									}
+								// 当鼠标在搜索框失去焦点
+								).blur(
+									function(){
+										if($(this).val() == '') {
+											$(this).val('搜索').css({color:"#333333"});
+										}
+									}
+								);
+							});
+						</script>
+					</div>
 				</div>
-			</div>
+			</div><!-- .header-top -->
 			<div class="header-inner section-inner">
 
 				<div class="header-titles-wrapper">

@@ -13,49 +13,63 @@
 
 ?>
 			<footer id="site-footer" role="contentinfo" class="header-footer-group">
-
-				<div class="section-inner">
-
-					<div class="footer-credits">
-
-						<p class="footer-copyright">&copy;
-							<?php
-							echo date_i18n(
-								/* translators: Copyright date format, see https://www.php.net/date */
-								_x( 'Y', 'copyright date format', 'twentytwenty' )
-							);
+				<div class="container">
+					<div class="footer-col-1 footer-column">
+						<div class="footer-logo">
+							<img src="<?php echo get_post_meta(173, 'banner9', true ); ?>" alt="duke"></a>
+						</div>
+						<div class="footer-socials">
+							<?php for($i=1;$i<9;$i++){ ?>
+								<div class="icon">
+									<a href="<?php echo get_post_meta(173, 'link'.$i, true ); ?>" target="_blank">
+									<img src="<?php echo get_post_meta(173, 'banner'.$i, true ); ?>" alt="<?php echo get_post_meta(173, 'name'.$i, true ); ?>"></a>
+								</div>
+							<?php } ?>
+						</div>
+					</div>
+					<div class="footer-col-2 footer-column">
+						<div class="content">
+							<?php 
+								wp_nav_menu(
+									array(
+										'container'  => '',
+										'items_wrap' => '%3$s',
+										'theme_location' => 'footer1',
+									)
+								);
 							?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						</p><!-- .footer-copyright -->
-
-						<p class="powered-by-wordpress">
-							<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentytwenty' ) ); ?>">
-								<?php _e( 'Powered by WordPress', 'twentytwenty' ); ?>
-							</a>
-						</p><!-- .powered-by-wordpress -->
-
-					</div><!-- .footer-credits -->
-
-					<a class="to-the-top" href="#site-header">
-						<span class="to-the-top-long">
-							<?php
-							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
+						</div>
+					</div>
+					<div class="footer-col-3 footer-column">
+						<div class="content">
+							<?php 
+								wp_nav_menu(
+									array(
+										'container'  => '',
+										'items_wrap' => '%3$s',
+										'theme_location' => 'footer2',
+									)
+								);
 							?>
-						</span><!-- .to-the-top-long -->
-						<span class="to-the-top-short">
-							<?php
-							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'Up %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
+						</div>
+					</div>
+					<div class="footer-col-4 footer-column">
+						<div class="content">
+							<?php 
+								wp_nav_menu(
+									array(
+										'container'  => '',
+										'items_wrap' => '%3$s',
+										'theme_location' => 'footer3',
+									)
+								);
 							?>
-						</span><!-- .to-the-top-short -->
-					</a><!-- .to-the-top -->
-
-				</div><!-- .section-inner -->
-
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div id="copyright"><?php echo get_post(173)->post_content; ?></div>
 			</footer><!-- #site-footer -->
-
 		<?php wp_footer(); ?>
-
 	</body>
 </html>
