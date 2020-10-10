@@ -142,6 +142,70 @@ function twentytwenty_theme_support() {
 	$loader = new TwentyTwenty_Script_Loader();
 	add_filter( 'script_loader_tag', array( $loader, 'filter_script_loader_tag' ), 10, 2 );
 
+	function my_custom_post_download() {
+		$labels = array(
+			'name' => '资料下载'
+		);
+		$args = array(
+			'labels'        => $labels,
+			'public' => true,
+			'menu_position' => 2,
+			'supports'      => array('title','excerpt', 'editor','thumbnail','page-attributes'),
+			'taxonomies' => array('post_tag'),
+			'has_archive' => true
+		);
+		register_post_type( 'download', $args );
+	}
+	add_action( 'init', 'my_custom_post_download' );
+
+	function my_custom_post_story() {
+		$labels = array(
+			'name' => '昆杜故事'
+		);
+		$args = array(
+			'labels'        => $labels,
+			'public' => true,
+			'menu_position' => 2,
+			'supports'      => array('title','excerpt', 'editor','thumbnail','page-attributes'),
+			'taxonomies' => array('post_tag'),
+			'has_archive' => true
+		);
+		register_post_type( 'story', $args );
+	}
+	add_action( 'init', 'my_custom_post_story' );
+
+	function my_custom_post_graduate() {
+		$labels = array(
+			'name' => '本科教育'
+		);
+		$args = array(
+			'labels'        => $labels,
+			'public' => true,
+			'menu_position' => 2,
+			'supports'      => array('title','excerpt', 'editor','thumbnail','page-attributes'),
+			'taxonomies' => array('post_tag'),
+			'has_archive' => true
+		);
+		register_post_type( 'graduate', $args );
+	}
+	add_action( 'init', 'my_custom_post_graduate' );
+
+	function my_taxonomies_ac_co() {
+		$labels = array(
+			'name'              => '分类目录',
+			'singular_name'     => '分类目录'
+		);
+		$blog_id = get_current_blog_id();
+		$args = array(
+			'labels' => $labels,
+			'hierarchical' => true,
+			'query_var' => true,
+			'show_admin_column' => true
+		);
+		register_taxonomy( 'category_story', array('story'), $args );
+		register_taxonomy( 'category_graduate', array('graduate'), $args );
+	}
+	add_action( 'init', 'my_taxonomies_ac_co');
 }
 
 add_action( 'after_setup_theme', 'twentytwenty_theme_support' );
@@ -767,6 +831,22 @@ function my_admin(){
         'display_page_review_meta_box',
         'page', 'normal', 'high'
     );
+    add_meta_box('post_review_meta_box',
+        '自定义数据',
+        'display_download_review_meta_box',
+        'download', 'normal', 'high'
+    );
+    add_meta_box('post_review_meta_box',
+        '自定义数据',
+        'display_story_review_meta_box',
+        'story', 'normal', 'high'
+    );
+    add_meta_box('post_review_meta_box',
+        '自定义数据',
+        'display_graduate_review_meta_box',
+        'graduate', 'normal', 'high'
+    );
+
 
     wp_enqueue_script( 'upload-image', get_template_directory_uri() . '/assets/js/upload.js', array('jquery'), '20201005', true );
     //wp_enqueue_media();
@@ -794,6 +874,7 @@ function display_page_review_meta_box($magazine_review){
     $upload_dir = wp_upload_dir();
     
 	global $post;
+	//echo $magazine_review->post_name;
 	if($magazine_review->ID==173){
 		echo '<br>';
 		echo 'footer logo<br>';
@@ -834,7 +915,100 @@ function display_page_review_meta_box($magazine_review){
 			echo '<input class="link" style = "width: 95%;" type="text" name="link'.$i.'" value="' .  esc_attr(get_post_meta( $magazine_review->ID, 'link'.$i, true )).'"></li>';
 		}
 		echo '</ul>';
+	}elseif($magazine_review->ID==187){
+		$title0 = esc_html( get_post_meta( $magazine_review->ID, 'title0', true ) );
+		echo 'Subtitle: ';
+		echo '<input class="title0" style = "width: 100%;" type="text" name="title0" value="' .  esc_attr($title0).'">';
+		echo '<br>';
+
+		echo '<br><ul>';
+		for($i=1;$i<7;$i++){
+			$intro = esc_html( get_post_meta( $magazine_review->ID, 'intro'.$i, true ) );
+			echo '<li style="width: 30%;margin-right: 3%;display: inline-block;"><br>';
+			wp_editor( htmlspecialchars_decode($intro), 'intro'.$i, $settings = array('textarea_name'=>'intro'.$i, 'editor_height' => 100,'textarea_rows' => 5, 'media_buttons' => false, 'quicktags' =>true) );
+			echo '<br></li>';
+		}
+		echo '</ul>';
+		$intro = esc_html( get_post_meta( $magazine_review->ID, 'intro7', true ) );
+		echo '<br>';
+		wp_editor( htmlspecialchars_decode($intro), 'intro7', $settings = array('textarea_name'=>'intro7', 'editor_height' => 100,'textarea_rows' => 5, 'media_buttons' => false, 'quicktags' =>true) );
+		echo 'Image: ';
+		echo '<br><ul>';
+		for($i=1;$i<5;$i++){
+			$banner1 = esc_html( get_post_meta( $magazine_review->ID, 'banner'.$i, true ) );
+			echo '<li style="width: 23%;margin-right: 2%;display: inline-block;"><input class="banner'.$i.'" type="hidden" name="banner'.$i.'" value="' .  esc_attr($banner1).'">';
+			if (!empty($banner1)){
+				echo '<img class="banner'.$i.'_img" src="' .  esc_attr($banner1).'" style="width:100px; height:100px;background: url('.site_url().'/wp-content/uploads/back.png");background-size: 100% 100%;" />';
+			}
+			else{
+				echo '<img class="banner'.$i.'_img" style="width:100px; height:100px" src= "'.site_url().'/wp-content/uploads/nopic.jpg"  />';
+			}
+			echo '<br>';
+			echo '<button class ="banner'.$i.'_bt" style = "width: 100px; height: 30px;margin-bottom: 5px;"/>Upload image</button>';
+			echo '<br>';
+			echo '<button class ="cancel'.$i.'" style = "width: 100px; height: 30px;  "/>Cancel</button>';
+			echo '</li>';
+		}
+		echo '</ul>';
+		echo '<br><ul>';
+		for($i=5;$i<13;$i++){
+			$banner1 = esc_html( get_post_meta( $magazine_review->ID, 'banner'.$i, true ) );
+			echo '<li style="width: 23%;margin-right: 2%;display: inline-block;"><input class="banner'.$i.'" type="hidden" name="banner'.$i.'" value="' .  esc_attr($banner1).'">';
+			if (!empty($banner1)){
+				echo '<img class="banner'.$i.'_img" src="' .  esc_attr($banner1).'" style="width:100px; height:100px;" />';
+			}
+			else{
+				echo '<img class="banner'.$i.'_img" style="width:100px; height:100px" src= "'.site_url().'/wp-content/uploads/nopic.jpg"  />';
+			}
+			echo '<br>';
+			echo '<button class ="banner'.$i.'_bt" style = "width: 100px; height: 30px;margin-bottom: 5px;"/>Upload image</button>';
+			echo '<br>';
+			echo '<button class ="cancel'.$i.'" style = "width: 100px; height: 30px;  "/>Cancel</button>';
+			echo '<br>';
+			$text = esc_html( get_post_meta( $magazine_review->ID, 'text'.$i, true ) );
+			wp_editor( htmlspecialchars_decode($text), 'text'.$i, $settings = array('textarea_name'=>'text'.$i, 'editor_height' => 100,'textarea_rows' => 5, 'media_buttons' => false, 'quicktags' =>true) );
+			echo '<br></li>';
+		}
+		echo '</ul>';
 	}
+}
+function display_download_review_meta_box($magazine_review){
+	echo '文件';
+	echo '<br>';
+	$bannerpdf = esc_html( get_post_meta( $magazine_review->ID, 'bannerpdf', true ) );
+	echo '<input class="bannerpdf" type="hidden" name="bannerpdf" value="' .  esc_attr($bannerpdf).'">';
+	if (!empty($bannerpdf)){
+		echo '<img class="bannerpdf_img" style="width:150px;" src= "'.site_url().'/wp-content/uploads/time.jpg"  />';
+	}
+	else{
+		echo '<img class="bannerpdf_img" style="width:150px;" src= "'.site_url().'/wp-content/uploads/nopic.jpg"  />';
+	}
+	echo '<br>';
+	echo '<button class ="bannerpdf_bt" style = "width: 100px; height: 30px;margin-bottom: 5px;"/>上传pdf</button>';
+	echo '<br>';
+	echo '<button class ="cancelpdf" style = "width: 100px; height: 30px;  "/>Cancel</button></li>';
+	echo '<br><br>';
+}
+function display_story_review_meta_box($magazine_review){
+	if(has_term('xsgs', 'category_story', $post)){
+		echo '<textarea rows="4" style="width: 95%;" name="intro">' . esc_attr(get_post_meta( $magazine_review->ID, 'intro', true )) . '</textarea>';
+	}
+}
+function display_graduate_review_meta_box($magazine_review){
+	echo '列表页图片';
+	echo '<br>';
+	$banner = esc_html( get_post_meta( $magazine_review->ID, 'banner', true ) );
+	echo '<input class="banner" type="hidden" name="banner" value="' .  esc_attr($banner).'">';
+	if (!empty($banner)){
+		echo '<img class="banner_img" src="' .  esc_attr($banner).'" style="width:150px;" />';
+	}
+	else{
+		echo '<img class="banner_img" style="width:150px;" src= "'.site_url().'/wp-content/uploads/nopic.jpg"  />';
+	}
+	echo '<br>';
+	echo '<button class ="banner_bt" style = "width: 100px; height: 30px;margin-bottom: 5px;"/>Upload image</button>';
+	echo '<br>';
+	echo '<button class ="cancel" style = "width: 100px; height: 30px;  "/>Cancel</button></li>';
 }
 
 /* 保存自定义数据 */
@@ -851,9 +1025,6 @@ function add_magazine_review_fields($magazine_review_id, $magazine_review){
 	// }
 	
 	if( $magazine_review_id == '173') {//aboutus
-        if (isset($_POST['history'])) {
-            update_post_meta($magazine_review_id, 'history', $_POST['history']);
-        }
         for($i=1;$i<10;$i++) {
             if (isset($_POST['name'.$i])) {
                 update_post_meta($magazine_review_id, 'name'.$i, $_POST['name'.$i]);
@@ -864,6 +1035,41 @@ function add_magazine_review_fields($magazine_review_id, $magazine_review){
             if (isset($_POST['banner'.$i])) {
                 update_post_meta($magazine_review_id, 'banner'.$i, $_POST['banner'.$i]);
             }
+        }
+	}elseif($magazine_review->ID==187){
+        if (isset($_POST['title0'])) {
+            update_post_meta($magazine_review_id, 'title0', $_POST['title0']);
+        }
+        for($i=1;$i<8;$i++) {
+            if (isset($_POST['intro'.$i])) {
+                update_post_meta($magazine_review_id, 'intro'.$i, $_POST['intro'.$i]);
+            }
+        }
+        for($i=1;$i<5;$i++) {
+            if (isset($_POST['banner'.$i])) {
+                update_post_meta($magazine_review_id, 'banner'.$i, $_POST['banner'.$i]);
+            }
+        }
+        for($i=5;$i<13;$i++) {
+            if (isset($_POST['text'.$i])) {
+                update_post_meta($magazine_review_id, 'text'.$i, $_POST['text'.$i]);
+            }
+            if (isset($_POST['banner'.$i])) {
+                update_post_meta($magazine_review_id, 'banner'.$i, $_POST['banner'.$i]);
+            }
+        }
+	}elseif( $magazine_review->post_type == 'download' ){
+        if (isset($_POST['bannerpdf'])) {
+            update_post_meta($magazine_review_id, 'bannerpdf', $_POST['bannerpdf']);
+        }
+	}elseif(has_term('xsgs', 'category_story', $post)){
+
+        if (isset($_POST['intro'])) {
+            update_post_meta($magazine_review_id, 'intro', $_POST['intro']);
+        }
+	}elseif( $magazine_review->post_type == 'graduate' ){
+        if (isset($_POST['banner'])) {
+            update_post_meta($magazine_review_id, 'banner', $_POST['banner']);
         }
 	}
 }
