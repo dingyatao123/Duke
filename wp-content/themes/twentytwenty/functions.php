@@ -847,7 +847,6 @@ function my_admin(){
         'graduate', 'normal', 'high'
     );
 
-
     wp_enqueue_script( 'upload-image', get_template_directory_uri() . '/assets/js/upload.js', array('jquery'), '20201005', true );
     //wp_enqueue_media();
     wp_enqueue_script('thickbox');
@@ -992,6 +991,21 @@ function display_download_review_meta_box($magazine_review){
 function display_story_review_meta_box($magazine_review){
 	if(has_term('xsgs', 'category_story', $post)){
 		echo '<textarea rows="4" style="width: 95%;" name="intro">' . esc_attr(get_post_meta( $magazine_review->ID, 'intro', true )) . '</textarea>';
+		echo '<br>';
+		echo '列表页图片';
+		echo '<br>';
+		$banner = esc_html( get_post_meta( $magazine_review->ID, 'banner', true ) );
+		echo '<input class="banner" type="hidden" name="banner" value="' .  esc_attr($banner).'">';
+		if (!empty($banner)){
+			echo '<img class="banner_img" src="' .  esc_attr($banner).'" style="width:150px;" />';
+		}
+		else{
+			echo '<img class="banner_img" style="width:150px;" src= "'.site_url().'/wp-content/uploads/nopic.jpg"  />';
+		}
+		echo '<br>';
+		echo '<button class ="banner_bt" style = "width: 100px; height: 30px;margin-bottom: 5px;"/>Upload image</button>';
+		echo '<br>';
+		echo '<button class ="cancel" style = "width: 100px; height: 30px;  "/>Cancel</button></li>';
 	}
 }
 function display_graduate_review_meta_box($magazine_review){
@@ -1067,6 +1081,9 @@ function add_magazine_review_fields($magazine_review_id, $magazine_review){
         if (isset($_POST['intro'])) {
             update_post_meta($magazine_review_id, 'intro', $_POST['intro']);
         }
+        if (isset($_POST['banner'])) {
+            update_post_meta($magazine_review_id, 'banner', $_POST['banner']);
+        }
 	}elseif( $magazine_review->post_type == 'graduate' ){
         if (isset($_POST['banner'])) {
             update_post_meta($magazine_review_id, 'banner', $_POST['banner']);
@@ -1074,3 +1091,17 @@ function add_magazine_review_fields($magazine_review_id, $magazine_review){
 	}
 }
 add_action( 'save_post', 'add_magazine_review_fields', 10, 7 );
+
+//模板
+add_action('template_include', 'load_single_template');
+function load_single_template($template) {
+    $new_template = '';
+    if( is_single() ) {
+		global $post;
+        if( has_term('xsgs', 'category_story', $post) ) {
+            $new_template = locate_template(array('single-xsgs.php' ));
+        }
+	}
+
+    return ('' != $new_template) ? $new_template : $template;
+}

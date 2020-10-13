@@ -173,7 +173,7 @@ p{margin: 0;}
 .tale .at>div{background: rgba(207,84,153,0.8);}
 .tale .at>div>div p{top: 67%;}
 .tale .stu{margin-bottom: 2rem;}
-.tale hr{margin: 0 0 0 8rem;}
+.tale hr{margin: 0 0 0 8rem;width: 100%;}
 .tale .par{margin-top: 2rem;}
 .tale .stu .box{float: left;}
 .tale .stu .img{overflow: hidden;position: relative;}
@@ -293,3 +293,29 @@ body:not(.overlay-header) .primary-menu ul{background: rgba(112,174,46,0.8);padd
 .curriculum .f2 .box .title{left: 8rem;}
 .curriculum .f3 .box .title{left: 8rem;}
 .curriculum .zs .intro{font-size: 0.8rem;color: #58595b;margin-bottom: 1rem;}
+
+.contactus .at>div{background: rgba(2,173,242,0.8);} 
+.contactus .lx .title{display: inline-block;color: #003a81;font-size: 1.875rem;border-top: 2px solid #003a81;line-height: 2;margin: 2rem 0 0;}
+.contactus .lx .ph{font-size: 1rem;color: #58595b;}
+.contactus .lx .ph img{display: inline;width: 2rem;margin: 0 1rem 0.5rem 0;vertical-align: middle;}
+.contactus .elementor-element-a492164 .elementor-image-box-img{width: 100%!important;}
+.contactus .elementor-element-a492164 .elementor-image-box-img img{width: 100%!important;height: inherit;}
+.contactus .elementor-element-a492164 .elementor-image-box-content{font-size: 0.8rem;}
+.contactus .elementor-element-a492164 .elementor-image-box-content p{color: #fff;}
+.contactus .ls li{width: 25%;margin: 1rem 0;float: left;border-right: 1px solid #6b6c6e;box-sizing: border-box;padding-left: 1rem;}
+.contactus .ls li:nth-child(4n){border: 0;}
+.contactus .ls .title{position: relative;color: #003a81;font-size: 1.125rem;line-height: 2;width: 9rem;margin: 0 auto;}
+.contactus .ls .title:after{content: '';position: absolute;background: #003a81;height:2px;width: 2.3rem;left: 0;top: 0;}
+.contactus .ls .in{color: #58595b;font-size: 0.8rem;width: 9rem;margin: 0 auto;}
+
+.xsgs{font-size: 1rem;}
+.xsgs .pagination-single{display: none;}
+.xsgs .at>div{background: rgba(174,199,7,0.8);}
+.xsgs .box1 h1{color: #003a81;font-size: 1.875rem;border-top: 2px solid #003a81;line-height: 2;margin: 0;}
+.xsgs .box1 h2{color: #70ae2e;font-size: 1.5rem;margin:  0 0 2rem;}
+.xsgs .box2 h2{color: #003a81;font-size: 1.1rem;margin:  0 0 2rem;}
+.xsgs .text{color: #58595b;font-size: 0.8rem;margin:  0 0 1rem;}
+.xsgs .elementor-element-ed224a2:after{position: absolute;content: '';width: 100vw;left: calc(50% - 50vw);height: 100%;top: 0;background: #e5ebf2;z-index: -1;}
+.xsgs .elementor-element-f89e118:after{position: absolute;content: '';width: 100vw;left: calc(50% - 50vw);height: 100%;top: 0;background: #e5ebf2;z-index: -1;}
+.xsgs .elementor-element-f89e118 .elementor-image{position: absolute;}
+.xsgs .elementor-element-534d65c .elementor-image{width: 50vw;}
