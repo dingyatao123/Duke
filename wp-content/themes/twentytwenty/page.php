@@ -12,7 +12,7 @@
 get_header();
 ?>
 
-<main id="site-content" class="tuition curriculum" role="main">
+<main id="site-content" class="tuition <?php echo get_post( $thisid )->post_name; ?>"" role="main">
 	<div class="at">
         <img src="<?php $full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($thisid), 'full');
         echo $full_image_url[0]; ?>" alt="<?php echo get_post( $thisid )->post_title; ?>" width="100%">

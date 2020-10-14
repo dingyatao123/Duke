@@ -21,6 +21,14 @@ p{margin: 0;}
     src: url('../css/InterstatePlus-Bold.ttf') format('truetype');
 }
 
+.entry-header{display: none;}
+.featured-media{display: none;}
+.pagination-single{display: none;}
+.post-meta-edit-link-wrapper{display: none;}
+.post-meta-single-bottom{display: none;}
+.post-inner{padding-top: 0;} 
+.primary-menu .current_page_ancestor{text-decoration: none;}
+.elementor-column .elementor-text-editor{font-size: 1rem;color: #58595b;margin-bottom: 1rem;}
 .CtaButton{-webkit-appearance: none;-moz-appearance: none;appearance: none;background: none;border: 2px solid transparent;border-bottom: none;border-right: none;cursor: pointer;display: inline-block;font-size: 14px;font-weight: 700;padding: 10px 60px 10px 22px;position: relative;text-decoration: none;transition: background 250ms, color 250ms;margin: 1rem 0;border-color:#a1cd1a;color: #a1cd1a;line-height: 2;}
 .CtaButton::before {bottom: 0;height: 2px;left: 0;-ms-transform: scaleX(0.77);transform: scaleX(0.77);-ms-transform-origin: 0 1px;transform-origin: 0 1px;width: 100%;}
 .CtaButton:hover {transition-delay: 250ms;}
@@ -51,6 +59,7 @@ p{margin: 0;}
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev{background: url(../images/5.png);background-size: 100% 100%;}
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next{background: url(../images/4.png);background-size: 100% 100%;}
 
+.elementor-element-4b8ca70 .elementor-text-editor p{color: #fff;}
 .elementor-element-4b8ca70 .CtaButton{border-color:#fff;color: #fff;}
 .elementor-element-4b8ca70 .CtaButton:hover{color: #fff;background: #a1cd1a;}
 .elementor-element-4b8ca70 .CtaButton::before,.elementor-element-4b8ca70 .CtaButton::after {background: #fff;}
@@ -77,6 +86,7 @@ p{margin: 0;}
 .elementor-element-79f981d .elementor-widget-container a{color: #fff;}
 .elementor-element-79f981d .elementor-widget-container>img{margin-bottom: 0.5rem;}
 .elementor-element-79f981d .elementor-widget-container a img{display: inline-block;width: 20px;margin-left: 5px;vertical-align: middle;}
+.primary-menu li.menu-item-has-children:hover > ul, .primary-menu li.menu-item-has-children:focus > ul, .primary-menu li.menu-item-has-children.focus > ul{left: 0;right: inherit;}
 
 .elementor-element-1ca8141  .elementor-widget-container p.title{color: #70ae2e;font-size: 3rem;line-height: 1;margin-bottom: 10rem;}
 .elementor-element-1ca8141  .elementor-widget-container p.title span{color: #003a81;font-size: 4.5rem;}
@@ -118,7 +128,7 @@ p{margin: 0;}
 .at{position: relative;}
 .at>div{position: absolute;left: 19vw;width: 25vw;height: 25vw;top: 12vw;background: rgba(104,191,29,0.8);}
 .at>div>div{position: absolute;left: -2vw;width: 25vw;height: 25vw;top: -2vw;border: 1px solid #fff;}
-.at>div>div p{color: #fff;font-size: 3.5vw;line-height: 1;position: absolute;left: 14%;top: 43%;}
+.at>div>div p{color: #fff;font-size: 3.5vw;line-height: 1;position: absolute;left: 14%;top: 67%;}
 .at>div>div p span{font-size: 5vw;}
 
 .about .at{position: relative;}
@@ -154,7 +164,6 @@ p{margin: 0;}
 
 
 .download .at>div{background: rgba(200,54,94,0.8);}
-.download .at>div>div p{top: 67%;}
 .download .center{background: #e5ebf2;padding: 4rem;}
 .download .center .content li{margin-bottom: 2rem;border: 1px solid #cdd0d4;border-bottom: 2px solid #71ae2e;}
 .download .center li .down{background: #f6f6f6;padding: 1rem;color: #003a81;font-size: 0.94rem;}
@@ -171,7 +180,6 @@ p{margin: 0;}
 .download .center .pagination li.active span{color: #fff;background: #adadad;}
 
 .tale .at>div{background: rgba(207,84,153,0.8);}
-.tale .at>div>div p{top: 67%;}
 .tale .stu{margin-bottom: 2rem;}
 .tale hr{margin: 0 0 0 8rem;width: 100%;}
 .tale .par{margin-top: 2rem;}
@@ -203,7 +211,6 @@ p{margin: 0;}
 .tale .par li .DirectionalArrow--right{height: 50px;}
 
 .student .at>div{background: rgba(174,199,7,0.8);}
-.student .at>div>div p{top: 67%;}
 .student .center ul li{float: left;width:  calc((100% - 6rem)/4);margin: 2rem 2rem 2rem 0;}
 .student .center ul li.l4{margin-right: 0;}
 .student .center ul hr{margin: 0;margin: 0;background-color: #58595b;height: 1px;border: 0;}
@@ -223,10 +230,6 @@ body:not(.overlay-header) .primary-menu ul{background: rgba(112,174,46,0.8);padd
 .primary-menu > li > .icon{display: none;}
 
 .tuition .at>div{background: rgba(0,128,77,0.8);}
-.tuition .at>div>div p{top: 67%;}
-.tuition .entry-header{display: none;}
-.tuition .featured-media{display: none;}
-.tuition .post-inner{padding-top: 0;} 
 .tuition .elementor-element-f8083fc h2{display: inline-block;color: #003a81;font-size: 1.875rem;border-top: 2px solid #003a81;line-height: 2;margin: 2rem 0 0;}
 .tuition .elementor-element-7e6086a p{color: #58595b;font-size: 0.9375rem;}
 .tuition table{font-size: 0.9375rem;color: #58595b;margin: 0;}
@@ -239,7 +242,6 @@ body:not(.overlay-header) .primary-menu ul{background: rgba(112,174,46,0.8);padd
 .tuition .elementor-element-d9476f6 ul li{margin-bottom: 1rem;list-style: disc;margin-left: 1rem;}
 
 .undergraduate .at>div{background: rgba(0,39,130,0.8);}
-.undergraduate .at>div>div p{top: 67%;}
 .undergraduate .center{max-width: 1140px;margin: 4rem auto;}
 .undergraduate .center ul li{float: left;width:  calc(50% - 2rem);margin: 0 4rem 2rem 0;}
 .undergraduate .center ul li.l2{margin-right: 0;}
@@ -251,28 +253,26 @@ body:not(.overlay-header) .primary-menu ul{background: rgba(112,174,46,0.8);padd
 .undergraduate .center ul li>p .DirectionalArrow--right{height: 50px;}
 
 .curriculum .at>div{background: rgba(240,164,0,0.8);}
-.curriculum .at>div>div p{top: 67%;}
-.curriculum .pagination-single{display: none;}
 .curriculum .gg{width: 140%;position: relative;color: #fff;}
 .curriculum .gg .title{position: absolute;left:1rem;top: 1rem;font-size: 1.5rem;}
 .curriculum .gg .intro{position: absolute;left:1rem;bottom: 6rem;width: 60%;font-size: 0.8rem;}
-.curriculum .gg .CtaButton{position: absolute;left:1rem;bottom: 1rem;font-size: 0.75rem;padding: 4px 50px 4px 12px;font-size: 0.8rem;}
+.curriculum .gg .CtaButton{position: absolute;left:1rem;bottom: 1rem;padding: 4px 50px 4px 12px;font-size: 0.8rem;}
 .curriculum .gg .CtaButton .DirectionalArrow--right{height: 50px;}
 .curriculum .zg{margin-top: 3rem;position: relative;color: #fff;width: 90%;float: right;}
 .curriculum .zg .title{position: absolute;left:1rem;top: 1rem;font-size: 1.5rem;}
 .curriculum .zg .intro{position: absolute;left:1rem;bottom: 6rem;width: calc(100% - 2rem);font-size: 0.8rem;}
-.curriculum .zg .CtaButton{position: absolute;left:1rem;bottom: 1rem;font-size: 0.75rem;padding: 4px 50px 4px 12px;font-size: 0.8rem;}
+.curriculum .zg .CtaButton{position: absolute;left:1rem;bottom: 1rem;padding: 4px 50px 4px 12px;font-size: 0.8rem;}
 .curriculum .zg .CtaButton .DirectionalArrow--right{height: 50px;}
 .curriculum .yy{color: #fff;}
 .curriculum .yy .title{left:1rem;top: 1rem;font-size: 1.5rem;margin-bottom: 8vw;}
 .curriculum .yy .intro{left:1rem;bottom: 6rem;width: 60%;font-size: 0.8rem;margin-bottom: 0.5rem;}
-.curriculum .yy .CtaButton{font-size: 0.75rem;padding: 4px 50px 4px 12px;font-size: 0.8rem;}
+.curriculum .yy .CtaButton{padding: 4px 50px 4px 12px;font-size: 0.8rem;}
 .curriculum .yy .CtaButton .DirectionalArrow--right{height: 50px;}
 .curriculum .zy{position: absolute;color: #fff;width: 80%;left: 10%;top: 1rem;}
 .curriculum .zy .title{position: absolute;left:1rem;top: 1rem;font-size: 1.5rem;}
 .curriculum .zy .yellow{background: #e18020;padding: 1rem;}
 .curriculum .zy .intro{font-size: 0.8rem;}
-.curriculum .zy .CtaButton{font-size: 0.75rem;padding: 4px 50px 4px 12px;font-size: 0.8rem;}
+.curriculum .zy .CtaButton{padding: 4px 50px 4px 12px;font-size: 0.8rem;}
 .curriculum .zy .CtaButton .DirectionalArrow--right{height: 50px;}
 .curriculum .xx{position: relative;color: #fff;}
 .curriculum .xx .title{position: absolute;left:1rem;top: 1rem;font-size: 1.5rem;}
@@ -282,7 +282,7 @@ body:not(.overlay-header) .primary-menu ul{background: rgba(112,174,46,0.8);padd
 .curriculum .hw{margin-top: 3rem;position: relative;color: #fff;}
 .curriculum .hw .title{position: absolute;left:1rem;top: 1rem;font-size: 1.5rem;}
 .curriculum .hw .intro{position: absolute;left:1rem;bottom: 6rem;width: calc(100% - 2rem);font-size: 0.8rem;}
-.curriculum .hw .CtaButton{position: absolute;left:1rem;bottom: 1rem;font-size: 0.75rem;padding: 4px 50px 4px 12px;font-size: 0.8rem;}
+.curriculum .hw .CtaButton{position: absolute;left:1rem;bottom: 1rem;padding: 4px 50px 4px 12px;font-size: 0.8rem;}
 .curriculum .hw .CtaButton .DirectionalArrow--right{height: 50px;}
 
 .curriculum .gghx>p{color: #003a81;font-size: 1.875rem;border-top: 2px solid #003a81;line-height: 2;margin-bottom: 1rem;}
@@ -309,13 +309,69 @@ body:not(.overlay-header) .primary-menu ul{background: rgba(112,174,46,0.8);padd
 .contactus .ls .in{color: #58595b;font-size: 0.8rem;width: 9rem;margin: 0 auto;}
 
 .xsgs{font-size: 1rem;}
-.xsgs .pagination-single{display: none;}
 .xsgs .at>div{background: rgba(174,199,7,0.8);}
 .xsgs .box1 h1{color: #003a81;font-size: 1.875rem;border-top: 2px solid #003a81;line-height: 2;margin: 0;}
 .xsgs .box1 h2{color: #70ae2e;font-size: 1.5rem;margin:  0 0 2rem;}
 .xsgs .box2 h2{color: #003a81;font-size: 1.1rem;margin:  0 0 2rem;}
 .xsgs .text{color: #58595b;font-size: 0.8rem;margin:  0 0 1rem;}
-.xsgs .elementor-element-ed224a2:after{position: absolute;content: '';width: 100vw;left: calc(50% - 50vw);height: 100%;top: 0;background: #e5ebf2;z-index: -1;}
-.xsgs .elementor-element-f89e118:after{position: absolute;content: '';width: 100vw;left: calc(50% - 50vw);height: 100%;top: 0;background: #e5ebf2;z-index: -1;}
-.xsgs .elementor-element-f89e118 .elementor-image{position: absolute;}
-.xsgs .elementor-element-534d65c .elementor-image{width: 50vw;}
+.xsgs .back1:after{position: absolute;content: '';width: 100vw;left: calc(50% - 50vw);height: 100%;top: 0;background: #e5ebf2;z-index: -1;}
+.xsgs .back2:after{position: absolute;content: '';width: 100vw;left: calc(50% - 50vw);height: 100%;top: 0;background: #e5ebf2;z-index: -1;}
+.xsgs .back2 .elementor-image{position: absolute;}
+.xsgs .back3 .elementor-image{width: 50vw;}
+
+.school .at>div{background: rgba(225,128,32,0.8);}
+.school .ls .title{color: #003a81;font-size: 1.875rem;border-top: 2px solid #003a81;line-height: 2;margin-bottom: 2rem;}
+.school .ls .intro{font-size: 0.8rem;color: #58595b;margin-bottom: 2rem;}
+.school .elementor-element-88fb88a:after{content: '';position: absolute;width: calc(50vw + 50%);height: 100%;left: 0;top: 0;background: #d4e7c0;z-index: -1;}
+.school .ls .CtaButton{padding: 4px 50px 4px 12px;font-size: 0.8rem;}
+.school .ls .CtaButton .DirectionalArrow--right{height: 50px;}
+.school .elementor-element-c773514 .elementor-image{width: 100vw;max-width: inherit;margin-left: calc(50% - 50vw);}
+
+.entrance .at>div{background: rgba(0,39,130,0.8);}
+.entrance .ls .title{color: #003a81;font-size: 1.875rem;line-height: 2;margin-bottom: 2rem;}
+.entrance .ls .intro{font-size: 0.8rem;color: #58595b;margin-bottom: 2rem;}
+.entrance .elementor-element-88fb88a:after{content: '';position: absolute;width: calc(50vw + 50%);height: 100%;left: 0;top: 0;background: #d4e7c0;z-index: -1;}
+.entrance .ls .CtaButton{padding: 4px 50px 4px 12px;font-size: 0.8rem;}
+.entrance .ls .CtaButton .DirectionalArrow--right{height: 50px;}
+.entrance .elementor-element-5f0653a .ls .title{color: #fff;}
+.entrance .elementor-element-5f0653a .ls .intro{color: #fff;}
+.entrance .elementor-element-52d0b03:before{content: '';position: absolute;width: 100vw;height: 100%;top: 0;left: calc(50% - 50vw);background: #d9e2ec;}
+.entrance .elementor-row .elementor-column .list{position: relative;}
+.entrance .elementor-row .elementor-column .list span{position: absolute;left: 1rem;top: 1rem;color: #fff;font-size: 1.5rem;}
+.entrance .elementor-row .elementor-column:nth-child(2) .list:first-child{margin-bottom: 20px;} 
+.entrance .elementor-element-6b4d25c .elementor-row .elementor-column .list span{left: 3rem;top: 3rem;}
+
+.recruit .at>div{background: rgba(207,217,0,0.8);}
+.recruit .text{font-size: 0.9rem;color: #58595b;margin-bottom: 1rem;}
+
+.online .at>div{background: rgba(0,132,203,0.8);}
+.online .text,.online li{font-size: 1rem;color: #58595b;margin-bottom: 1rem;}
+.online .text span,.online li span{color: #70ae2e;}
+.online h2{display: inline-block;color: #003a81;font-size: 1.6rem;border-top: 2px solid #003a81;line-height: 2;margin: 2rem 0 0;}
+.online ul{margin: 2rem 0 0;}
+.online .title{color: #003a81;font-size: 1.125rem;line-height: 2;margin: 2rem 0 0;}
+.online .t2{color: #003a81;font-size: 1rem;margin:0 0 1rem;}
+.online .elementor-element-a093eba img{margin-top: 3rem;}
+.online .over{padding-left: 2em;overflow: hidden;}
+.online .over li{position:relative;}
+.online .over li::before{content: '';position: absolute;left: -1.5em;width: 9px;height: 9px;border-radius: 5px;top: 0.5em;background-color: #70ae2e;}
+.online .over li::after{content: '';position: absolute;left: calc(4px - 1.5em);top: 0.5em;width: 1px;height: 200%;background-color: #70ae2e;}
+.online .elementor-element-661e38b .CtaButton{margin-left: 20%;}
+
+.scholarships .at>div{background: rgba(237,138,56,0.8);}
+.scholarships h2{display: inline-block;color: #003a81;font-size: 1.6rem;border-top: 2px solid #003a81;line-height: 2;margin: 0 0 1rem;padding-right: 5rem;}
+.scholarships .t2{color: #58595b;font-size: 1.1rem;margin:1rem 0 1rem;}
+.scholarships .over{padding-left: 3em;overflow: hidden;}
+.scholarships .over li{position:relative;margin-bottom: 0.5rem;}
+.scholarships .over li::before{content: '';position: absolute;left: -1.5em;width: 9px;height: 9px;border-radius: 5px;top: 0.5em;background-color: #70ae2e;}
+.scholarships .over li::after{content: '';position: absolute;left: calc(4px - 1.5em);top: 0.5em;width: 1px;height: 200%;background-color: #70ae2e;}
+.scholarships .over li span{position: absolute;left: -2.2em;top: 0;color: #70ae2e;font-size: 1.2rem;}
+.scholarships p.blue{color: #003a81;margin: 0 0 1em 2em;}
+.scholarships .list{background: #ecedec;padding: 2em 1em;}
+.scholarships .list li{padding: 0.5rem 1em;margin-bottom: 1rem;}
+.scholarships .list ul li:nth-child(2n+1){background: #dadcda;}
+.scholarships .list ul li .t{font-family: '冬青黑体简体中文';font-size: 1.1rem;}
+
+.rules .at>div{background: rgba(237,138,56,0.8);}
+
+.rules .at>div{background: rgba(237,138,56,0.8);}
