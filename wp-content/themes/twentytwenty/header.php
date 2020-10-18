@@ -8,7 +8,7 @@
  * @subpackage Twenty_Twenty
  * @since Twenty Twenty 1.0
  */
-
+$blog_id = get_current_blog_id();
 ?><!DOCTYPE html>
 
 <html class="no-js" <?php language_attributes(); ?>>
@@ -25,7 +25,7 @@
     	<script src="<?php bloginfo('template_directory'); ?>/assets/js/swiper.min.js" type='text/javascript'></script>
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?> id="dukekunshan<?php echo $blog_id; ?>">
 
 		<?php
 		wp_body_open();
@@ -35,7 +35,13 @@
 			<div class="header-top">
 				<div class="cont">
 					<div class="lf">
-						<div><img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/1.png" /></div> 中国 <div><img class="sq" src="<?php bloginfo('template_directory'); ?>/assets/images/2.png" /></div>
+						<div>
+							<img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/1.png" /></div> 中文 <div><img class="sq" src="<?php bloginfo('template_directory'); ?>/assets/images/2.png" />
+							<ul>
+								<li><a href="/">中文</a></li>
+								<li><a href="/en">English</a></li>
+							</ul>
+						</div>
 					</div>
 					<div class="rt">
 						<ul class="primary-menu reset-list-style">
@@ -54,7 +60,7 @@
 						</ul>
 						<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
 							<div><img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/3.png" /></div>
-							<input class="searchInput" type="text" value="搜索" name="s" id="s"/>
+							<input class="searchInput" type="text" value="<?php if($blog_id==3){echo 'Search';}else{echo '搜索';} ?>" name="s" id="s"/>
 						</form>
 
 						<script type="text/javascript">
@@ -83,6 +89,18 @@
 
 				<div class="header-titles-wrapper">
 
+					<div class="header-titles">
+												
+						<?php
+							// Site title or logo.
+							twentytwenty_site_logo();
+												
+							// Site description.
+							twentytwenty_site_description();
+						?>
+					
+					</div><!-- .header-titles -->
+											
 					<?php
 
 					// Check whether the header search is activated in the customizer.
@@ -102,18 +120,6 @@
 						</button><!-- .search-toggle -->
 
 					<?php } ?>
-
-					<div class="header-titles">
-
-						<?php
-							// Site title or logo.
-							twentytwenty_site_logo();
-
-							// Site description.
-							twentytwenty_site_description();
-						?>
-
-					</div><!-- .header-titles -->
 
 					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 						<span class="toggle-inner">

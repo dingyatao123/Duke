@@ -14,12 +14,12 @@ get_header();
 		<ul>
 		<?php
 			$args = array(
-				'post_type' 	 => 'graduate',
+				'post_type' 	 => 'post',
 				'orderby'   	 => 'date',
 				'order'   	 => 'asc',
 				'tax_query' => array(
 					array(
-						'taxonomy' => 'category_graduate',
+						'taxonomy' => 'category',
 						'field' => 'slug', //can be set to ID
 						'terms' => 'bkjy',
 					)

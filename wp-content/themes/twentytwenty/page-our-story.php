@@ -2,6 +2,7 @@
 
 $thisid = $post -> ID;
 get_header();
+$blog_id = get_current_blog_id();
 ?>
 
 <main id="site-content" class="tale" role="main">
@@ -12,7 +13,7 @@ get_header();
     </div>
 	<div class="center">
 		<div class="stu">
-			<p>学生故事</p>
+			<p><?php if($blog_id==1){echo '学生故事';}else{echo 'Student Story';} ?></p>
 			<div class="box box1 img img1"><div></div></div>
 			<div class="box box2">
 				<div class="img img2"><div></div></div>
@@ -27,11 +28,11 @@ get_header();
 				<div class="img img7"><div></div></div>
 			</div>
 			<div class="clear"></div>
-			<a class="CtaButton" href="<?php echo get_permalink(323); ?>" style="font-size: 1rem;">查阅全部<span class="CtaButton-arrow DirectionalArrow DirectionalArrow--right"></span></a>
+			<div align="center"><a class="CtaButton2" href="<?php echo get_permalink(323); ?>"><p><?php if($blog_id==1){echo '查阅更多学生故事';}else{echo 'Lrean More Students Stories';} ?></p></a></div>
 		</div>
 		<hr>
 		<div class="par">
-			<p>家长感言</p>
+			<p><?php if($blog_id==1){echo '家长感言';}else{echo 'Parents Comments';} ?></p>
 			<ul>
 			<?php
 				$args = array(
@@ -51,13 +52,11 @@ get_header();
 				while ($slides->have_posts()):$slides->the_post(); ?>
 					<li>
 						<img src="<?php $full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');echo $full_image_url[0]; ?>">
-						<p><?php the_title(); ?></p>
-						<a class="CtaButton" href="<?php echo the_permalink(); ?>" style="font-size: 1rem;">了解更多<span class="CtaButton-arrow DirectionalArrow DirectionalArrow--right"></span></a>
+						<a class="CtaButton" href="<?php echo the_permalink(); ?>"><?php the_title(); ?><span class="CtaButton-arrow DirectionalArrow DirectionalArrow--right"></span></a>
 					</li>
 				<?php endwhile; ?>
 				<div class="clear"></div>
 			</ul>
-			<a class="CtaButton" href="<?php echo get_permalink(325); ?>" style="font-size: 1rem;">查阅全部<span class="CtaButton-arrow DirectionalArrow DirectionalArrow--right"></span></a>
 		</div>
 	</div>
 </main><!-- #site-content -->

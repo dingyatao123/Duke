@@ -71,5 +71,16 @@
 				<div id="copyright"><?php echo get_post(173)->post_content; ?></div>
 			</footer><!-- #site-footer -->
 		<?php wp_footer(); ?>
+		<script>
+			$(document).ready(function(){
+				$('.elementor-32 .swiper-container img').hover(function(){
+					var a =$(this).attr('src');
+					$(this).attr('src',$(this).attr('src').replace(".jpg","_2.jpg"));
+				},function(){
+					var a =$(this).attr('src');
+					$(this).attr('src',$(this).attr('src').replace("_2.jpg",".jpg"));
+				});
+			});
+		</script>
 	</body>
 </html>

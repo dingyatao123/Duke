@@ -142,22 +142,6 @@ function twentytwenty_theme_support() {
 	$loader = new TwentyTwenty_Script_Loader();
 	add_filter( 'script_loader_tag', array( $loader, 'filter_script_loader_tag' ), 10, 2 );
 
-	function my_custom_post_application() {
-		$labels = array(
-			'name' => '入学申请'
-		);
-		$args = array(
-			'labels'        => $labels,
-			'public' => true,
-			'menu_position' => 2,
-			'supports'      => array('title','excerpt', 'editor','thumbnail','page-attributes'),
-			'taxonomies' => array('post_tag'),
-			'has_archive' => true
-		);
-		register_post_type( 'application', $args );
-	}
-	add_action( 'init', 'my_custom_post_application' );
-
 	function my_custom_post_download() {
 		$labels = array(
 			'name' => '资料下载'
@@ -173,23 +157,7 @@ function twentytwenty_theme_support() {
 		register_post_type( 'download', $args );
 	}
 	add_action( 'init', 'my_custom_post_download' );
-
-	function my_custom_post_graduate() {
-		$labels = array(
-			'name' => '本科教育'
-		);
-		$args = array(
-			'labels'        => $labels,
-			'public' => true,
-			'menu_position' => 2,
-			'supports'      => array('title','excerpt', 'editor','thumbnail','page-attributes'),
-			'taxonomies' => array('post_tag'),
-			'has_archive' => true
-		);
-		register_post_type( 'graduate', $args );
-	}
-	add_action( 'init', 'my_custom_post_graduate' );
-
+	
 	function my_custom_post_story() {
 		$labels = array(
 			'name' => '昆杜故事'

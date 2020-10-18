@@ -13,11 +13,11 @@ get_header();
 ?>
 
 <main id="site-content" class="tuition xsgs " role="main">
-	<div class="at">
+	<!--<div class="at">
         <img src="<?php $full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($thisid), 'full');
         echo $full_image_url[0]; ?>" alt="<?php echo get_post( $thisid )->post_title; ?>" width="100%">
         <div><div><p>学生故事</p></div></div>
-    </div>
+    </div>-->
 	<?php
 
 	if ( have_posts() ) {
