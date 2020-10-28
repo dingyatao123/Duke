@@ -14,21 +14,93 @@ $blog_id = get_current_blog_id();
 	<div class="center">
 		<div class="stu">
 			<p><?php if($blog_id==1){echo '学生故事';}else{echo 'Student Story';} ?></p>
-			<div class="box box1 img img1"><div></div></div>
-			<div class="box box2">
-				<div class="img img2"><div></div></div>
-				<div class="box21">
-					<div class="img img3"><div></div></div>
-					<div class="img img4"><div></div></div>
+			<div class="stupc">
+				<div class="box box1 img img1"><div></div></div>
+				<div class="box box2">
+					<div class="img img2"><div></div></div>
+					<div class="box21">
+						<div class="img img3"><div></div></div>
+						<div class="img img4"><div></div></div>
+					</div>
 				</div>
+				<div class="box box3">
+					<div class="img img5"><div></div></div>
+					<div class="img img6"><div></div></div>
+					<div class="img img7"><div></div></div>
+				</div>
+				<div class="clear"></div>
 			</div>
-			<div class="box box3">
-				<div class="img img5"><div></div></div>
-				<div class="img img6"><div></div></div>
-				<div class="img img7"><div></div></div>
-			</div>
-			<div class="clear"></div>
-			<div align="center"><a class="CtaButton2" href="<?php echo get_permalink(323); ?>"><p><?php if($blog_id==1){echo '查阅更多学生故事';}else{echo 'Lrean More Students Stories';} ?></p></a></div>
+			<div class="stumobile">
+				<!-- Swiper -->
+				<div class="swiper-container gallery-top">
+					<div class="swiper-wrapper">
+						<?php
+							$args = array(
+								'post_type' 	 => 'story',
+								'orderby'   	 => 'date',
+								'order'   	 => 'desc',
+								'tax_query' => array(
+									array(
+										'taxonomy' => 'category_story',
+										'field' => 'slug', //can be set to ID
+										'terms' => 'xsgs',
+									)
+								),
+								'posts_per_page' => -1
+							);
+							$slides = new WP_Query($args);
+							while ($slides->have_posts()):$slides->the_post(); ?>
+								<div class="swiper-slide" style="background-image:url(<?php echo get_post_meta( $post->ID, 'banner', true ); ?>)">
+									<p><?php echo $post->post_title; ?></p>
+								</div>
+						<?php endwhile; ?>
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next swiper-button-white"></div>
+					<div class="swiper-button-prev swiper-button-white"></div>
+				</div>
+				<div class="swiper-container gallery-thumbs">
+					<div class="swiper-wrapper">
+					<?php
+							$args = array(
+								'post_type' 	 => 'story',
+								'orderby'   	 => 'date',
+								'order'   	 => 'desc',
+								'tax_query' => array(
+									array(
+										'taxonomy' => 'category_story',
+										'field' => 'slug', //can be set to ID
+										'terms' => 'xsgs',
+									)
+								),
+								'posts_per_page' => -1
+							);
+							$slides = new WP_Query($args);
+							while ($slides->have_posts()):$slides->the_post(); ?>
+								<div class="swiper-slide" style="background-image:url(<?php echo get_post_meta( $post->ID, 'banner', true ); ?>)"></div>
+						<?php endwhile; ?>
+					</div>
+				</div>
+				<!-- Initialize Swiper -->
+				<script>
+				var galleryTop = new Swiper('.gallery-top', {
+					nextButton: '.swiper-button-next',
+					prevButton: '.swiper-button-prev',
+					spaceBetween: 0
+				});
+				var galleryThumbs = new Swiper('.gallery-thumbs', {
+					spaceBetween: 10,
+					centeredSlides: true,
+					slidesPerView: 'auto',
+					touchRatio: 0.2,
+					slideToClickedSlide: true
+				});
+				galleryTop.params.control = galleryThumbs;
+				galleryThumbs.params.control = galleryTop;
+				
+				</script>
+			</div>	
+			<div align="center"><a class="CtaButton2" href="<?php echo get_permalink(323); ?>"><p><?php if($blog_id==1){echo '查阅更多学生故事';}else{echo 'Learn More Students Stories';} ?></p></a></div>
 		</div>
 		<hr>
 		<div class="par">

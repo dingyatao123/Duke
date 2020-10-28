@@ -879,17 +879,35 @@ function display_page_review_meta_box($magazine_review){
 		echo '<br><ul>';
 		for($i=1;$i<9;$i++){
 			$banner1 = esc_html( get_post_meta( $magazine_review->ID, 'banner'.$i, true ) );
-			echo '<li style="width: 25%;display: inline-block;"><input class="banner'.$i.'" type="hidden" name="banner'.$i.'" value="' .  esc_attr($banner1).'">';
+			echo '<li style="width: 25%;display: inline-block;">';
+			echo "<div style='width: 50%;display: inline-block;'>";
+			echo '<input class="banner'.$i.'" type="hidden" name="banner'.$i.'" value="' .  esc_attr($banner1).'">';
 			if (!empty($banner1)){
 				echo '<img class="banner'.$i.'_img" src="' .  esc_attr($banner1).'" style="width:100px; height:100px;background: url('.site_url().'/wp-content/uploads/back.png");background-size: 100% 100%;" />';
 			}
 			else{
 				echo '<img class="banner'.$i.'_img" style="width:100px; height:100px" src= "'.site_url().'/wp-content/uploads/nopic.jpg"  />';
 			}
+			
+			echo '<br><button class ="banner'.$i.'_bt" style = "width: 90%; height: 30px;margin-bottom: 5px;"/>Upload image</button>';
 			echo '<br>';
-			echo '<button class ="banner'.$i.'_bt" style = "width: 100px; height: 30px;margin-bottom: 5px;"/>Upload image</button>';
+			echo '<button class ="cancel'.$i.'" style = "width: 90%; height: 30px;  "/>Cancel</button>';
+			echo '</div><div style="width: 50%;display: inline-block;">';
+			$j = $i+9; 
+			$banner1 = esc_html( get_post_meta( $magazine_review->ID, 'banner'.$j, true ) );
+			echo '<input class="banner'.$j.'" type="hidden" name="banner'.$j.'" value="' .  esc_attr($banner1).'">';
+			if (!empty($banner1)){
+				echo '<img class="banner'.$j.'_img" src="' .  esc_attr($banner1).'" style="width:100px; height:100px;background: url('.site_url().'/wp-content/uploads/back.png");background-size: 100% 100%;" />';
+			}
+			else{
+				echo '<img class="banner'.$j.'_img" style="width:100px; height:100px" src= "'.site_url().'/wp-content/uploads/nopic.jpg"  />';
+			}
+			
+			echo '<br><button class ="banner'.$j.'_bt" style = "width: 90%; height: 30px;margin-bottom: 5px;"/>Upload image</button>';
 			echo '<br>';
-			echo '<button class ="cancel'.$i.'" style = "width: 100px; height: 30px;  "/>Cancel</button>';
+			echo '<button class ="cancel'.$j.'" style = "width: 90%; height: 30px;  "/>Cancel</button>';
+			echo '</div>';
+
 			$name = esc_html( get_post_meta( $magazine_review->ID, 'name'.$i, true ) );
 			echo '<br>';
 			echo '<input class="name" style = "width: 95%;margin: 5px 0;" type="text" name="name'.$i.'" value="' .  esc_attr(get_post_meta( $magazine_review->ID, 'name'.$i, true )).'">';
@@ -1023,7 +1041,7 @@ function add_magazine_review_fields($magazine_review_id, $magazine_review){
 	// }
 	
 	if( $magazine_review_id == '173') {//aboutus
-        for($i=1;$i<10;$i++) {
+        for($i=1;$i<18;$i++) {
             if (isset($_POST['name'.$i])) {
                 update_post_meta($magazine_review_id, 'name'.$i, $_POST['name'.$i]);
             }

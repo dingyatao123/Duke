@@ -36,10 +36,10 @@ $blog_id = get_current_blog_id();
 				<div class="cont">
 					<div class="lf">
 						<div>
-							<img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/1.png" /></div> 中文 <div><img class="sq" src="<?php bloginfo('template_directory'); ?>/assets/images/2.png" />
+							<img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/1.png" /></div> <?php if($blog_id==3){echo 'English – International Students';}else{echo '中文 – 国内';} ?> <div><img class="sq" src="<?php bloginfo('template_directory'); ?>/assets/images/2.png" />
 							<ul>
-								<li><a href="/">中文</a></li>
-								<li><a href="/en">English</a></li>
+								<li><a href="/">中文 – 国内</a></li>
+								<li><a href="/en">English – International Students</a></li>
 							</ul>
 						</div>
 					</div>
@@ -100,7 +100,18 @@ $blog_id = get_current_blog_id();
 						?>
 					
 					</div><!-- .header-titles -->
-											
+						
+					<button class="toggle lan-toggle mobile-lan-toggle">
+						<span class="toggle-inner lanicon">
+							<img style="display: inline-block;" class="gb2" src="<?php bloginfo('template_directory'); ?>/assets/images/<?php if($blog_id==3){echo 17;}else{echo 12;} ?>.png" width="20" title="">
+						</span>
+					</button><!-- .nav-toggle -->
+					<div class="lan">
+						<ul>
+							<li><a href="/">中文 – 国内</a></li>
+							<li><a href="/en">English – International Students</a></li>
+						</ul>
+					</div>
 					<?php
 
 					// Check whether the header search is activated in the customizer.
@@ -112,10 +123,7 @@ $blog_id = get_current_blog_id();
 
 						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
 							<span class="toggle-inner">
-								<span class="toggle-icon">
-									<?php twentytwenty_the_theme_svg( 'search' ); ?>
-								</span>
-								<span class="toggle-text"><?php _e( 'Search', 'twentytwenty' ); ?></span>
+							<img style="display: inline-block;" class="gb2" src="<?php bloginfo('template_directory'); ?>/assets/images/11.png" width="20" title="">
 							</span>
 						</button><!-- .search-toggle -->
 
@@ -123,10 +131,7 @@ $blog_id = get_current_blog_id();
 
 					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 						<span class="toggle-inner">
-							<span class="toggle-icon">
-								<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
-							</span>
-							<span class="toggle-text"><?php _e( 'Menu', 'twentytwenty' ); ?></span>
+							<img style="display: inline-block;" class="gb2" src="<?php bloginfo('template_directory'); ?>/assets/images/10.png" width="20" title="">
 						</span>
 					</button><!-- .nav-toggle -->
 

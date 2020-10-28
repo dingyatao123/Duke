@@ -20,9 +20,13 @@
 						</div>
 						<div class="footer-socials">
 							<?php for($i=1;$i<9;$i++){ ?>
-								<div class="icon">
+								<div class="icon pc">
 									<a href="<?php echo get_post_meta(173, 'link'.$i, true ); ?>" target="_blank">
 									<img src="<?php echo get_post_meta(173, 'banner'.$i, true ); ?>" alt="<?php echo get_post_meta(173, 'name'.$i, true ); ?>"></a>
+								</div>
+								<div class="icon mobile">
+									<a href="<?php  $j=$i+9; echo get_post_meta(173, 'link'.$i, true ); ?>" target="_blank">
+									<img src="<?php echo get_post_meta(173, 'banner'.$j, true ); ?>" alt="<?php echo get_post_meta(173, 'name'.$i, true ); ?>"></a>
 								</div>
 							<?php } ?>
 						</div>
@@ -68,17 +72,37 @@
 					</div>
 					<div class="clear"></div>
 				</div>
-				<div id="copyright"><?php echo get_post(173)->post_content; ?></div>
+				<div class="mobile">
+					<div class="footer-logo">
+						<img src="<?php echo get_post_meta(173, 'banner9', true ); ?>" alt="duke"></a>
+					</div>
+					<div id="copyright"><?php echo get_post(173)->post_content; ?></div>
+				</div>
 			</footer><!-- #site-footer -->
 		<?php wp_footer(); ?>
 		<script>
 			$(document).ready(function(){
+				$('#site-footer .container .content>li>a').attr('href','javascript: void(0);');
 				$('.elementor-32 .swiper-container img').hover(function(){
 					var a =$(this).attr('src');
 					$(this).attr('src',$(this).attr('src').replace(".jpg","_2.jpg"));
 				},function(){
 					var a =$(this).attr('src');
 					$(this).attr('src',$(this).attr('src').replace("_2.jpg",".jpg"));
+				});
+				$('.videobox .elementor-widget-container .video .CtaButton').click(function(){
+					$(this).hide();$('.video video').trigger('play');
+				});
+				$('#site-footer .container .content>li>a').click(function(e){
+					$('#site-footer .container .content>li .sub-menu').removeClass('sh');
+					$(this).next().addClass('sh');
+					e.preventDefault();
+				});
+				$('.lanicon').click(function(){
+					$(".header-titles-wrapper .lan").toggle();
+				});
+				$('.header-titles-wrapper .lan').click(function(){
+					$(this).toggle();
 				});
 			});
 		</script>

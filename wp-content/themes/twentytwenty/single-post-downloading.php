@@ -62,9 +62,9 @@ function _paging_link( $i, $title = '',$post_name,$per_page) {
 				while ($slides->have_posts()):$slides->the_post(); ?>
 				<li>
 					<div class="down">
-						<a target="_blank" class="CtaButton" href="<?php echo get_post_meta($post->ID, 'bannerpdf', true ); ?>">点击下载<span class="CtaButton-arrow DirectionalArrow DirectionalArrow--right"></span></a>
 						<p><?php echo $post->post_excerpt; ?></p>
 						<p><?php the_title(); ?></p>
+						<a target="_blank" class="CtaButton" href="<?php echo get_post_meta($post->ID, 'bannerpdf', true ); ?>">点击下载<span class="CtaButton-arrow DirectionalArrow DirectionalArrow--right"></span></a>
 						<div class="clear"></div>
 					</div>
 					<div class="img">
