@@ -195,9 +195,9 @@ p{margin: 0;}
 .about .content .ul:nth-child(3)>li:nth-child(2)>div:nth-child(2){margin-left: 0;}
 
 .why-duke-kunshan .atslider>div p.text{top: initial;bottom: 10%;line-height: 1.1;}
-.why-duke-kunshan .li{padding-top: 2rem;border-top: 2px solid #e18020;font-size: 1rem;height: 10rem;}
-.why-duke-kunshan .li p:first-child{font-size: 1.25rem;color: #003a81;font-weight: bold;}
-.why-duke-kunshan .li p strong{font-size: 3rem;font-family: 'ispb';color: #e18020;}
+.c5 .li{padding-top: 2rem;border-top: 2px solid #e18020;font-size: 1rem;height: 10rem;}
+.c5 .li p:first-child{font-size: 1.25rem;color: #003a81;font-weight: bold;}
+.c5 .li p strong{font-size: 3rem;font-family: 'ispb';color: #e18020;}
 .why-duke-kunshan .xz{background: #003a81;color: #003a81;color: #fff;padding: 2rem 4rem 2rem;font-size: 1.75rem;}
 .why-duke-kunshan .xz p{border-top: 2px solid #e18020;}
 .why-duke-kunshan .xz p:first-child{font-size: 3rem;border: 0;display: inline-block;}
@@ -446,29 +446,29 @@ body:not(.overlay-header) .primary-menu ul li{border-bottom:1px solid #b7d696;}
 .campus-life .ls .CtaButton .DirectionalArrow--right{height: 40px;right: 19px;}
 .campus-life .c773514 .elementor-image{width: 100vw;max-width: inherit;margin-left: calc(50% - 50vw);}
 
-.admission-main .atslider{background: rgba(255,188,0,0.8);}
-.admission-main .ls .title{display: inline-block;border-top: 2px solid #003a81;color: #003a81;font-size: 1.875rem;line-height: 2;margin-bottom: 2rem;font-weight: bold;}
-.admission-main .ls .intro{font-size: 1rem;color: #58595b;margin-bottom: 2rem;}
-.admission-main .elementor-element-88fb88a:after{content: '';position: absolute;width: calc(50vw + 50%);height: 100%;left: 0;top: 0;background: #d4e7c0;z-index: -1;}
-.admission-main .ls .CtaButton a{padding: 4px 60px 4px 22px;font-size: 0.8rem;margin: 0;}
-.admission-main .ls .CtaButton .DirectionalArrow--right{height: 40px;}
-.admission-main .elementor-row .elementor-column .list{position: relative;}
-.admission-main .elementor-row .elementor-column .list span{position: absolute;left: 1rem;top: 1rem;color: #fff;font-size: 1.5rem;}
-.admission-main .elementor-row .elementor-column:nth-child(2) .list:first-child{margin-bottom: 20px;} 
-.admission-main .elementor-element-6b4d25c .elementor-row .elementor-column .list span{left: 3rem;top: 3rem;}
-.admission-main .elementor-image-box-content{position: relative;}
-.admission-main .elementor-image-box-img{display: block;}
-.admission-main .xf .elementor-image-box-content h3{margin: 0;background: #ffab00;text-align: left;font-size: 1.875rem;line-height: 2;padding-left: 2rem;}
-.admission-main .xf .elementor-column:nth-child(2) .elementor-image-box-content h3{background: #8cbd31;}
-.admission-main .zs .elementor-column:nth-child(2) .elementor-image-box-content h3{display: none;}
-.admission-main .ws .elementor-column:first-child .elementor-image-box-content h3{display: none;}
+.admissions .atslider{background: rgba(255,188,0,0.8);}
+.admissions .ls .title{display: inline-block;border-top: 2px solid #003a81;color: #003a81;font-size: 1.875rem;line-height: 2;margin-bottom: 2rem;font-weight: bold;}
+.admissions .ls .intro{font-size: 1rem;color: #58595b;margin-bottom: 2rem;}
+.admissions .elementor-element-88fb88a:after{content: '';position: absolute;width: calc(50vw + 50%);height: 100%;left: 0;top: 0;background: #d4e7c0;z-index: -1;}
+.admissions .ls .CtaButton a{padding: 4px 60px 4px 22px;font-size: 0.8rem;margin: 0;}
+.admissions .ls .CtaButton .DirectionalArrow--right{height: 40px;}
+.admissions .elementor-row .elementor-column .list{position: relative;}
+.admissions .elementor-row .elementor-column .list span{position: absolute;left: 1rem;top: 1rem;color: #fff;font-size: 1.5rem;}
+.admissions .elementor-row .elementor-column:nth-child(2) .list:first-child{margin-bottom: 20px;} 
+.admissions .elementor-element-6b4d25c .elementor-row .elementor-column .list span{left: 3rem;top: 3rem;}
+.admissions .elementor-image-box-content{position: relative;}
+.admissions .elementor-image-box-img{display: block;}
+.admissions .xf .elementor-image-box-content h3{margin: 0;background: #ffab00;text-align: left;font-size: 1.875rem;line-height: 2;padding-left: 2rem;}
+.admissions .xf .elementor-column:nth-child(2) .elementor-image-box-content h3{background: #8cbd31;}
+.admissions .zs .elementor-column:nth-child(2) .elementor-image-box-content h3{display: none;}
+.admissions .ws .elementor-column:first-child .elementor-image-box-content h3{display: none;}
 .recruitment-guidelines-2 .atslider{background: rgba(207,217,0,0.8);}
 .recruitment-guidelines-2 .text{font-size: 1rem;color: #58595b;margin-bottom: 1rem;}
-.admission-main .zcz .elementor-image-box-content h3{margin: 0;font-size: 1.875rem;line-height: 2;color: #003a81;font-weight: bold;}
-.admission-main .zcz .elementor-image-box-content h3:hover{text-decoration: underline;}
+.admissions .zcz .elementor-image-box-content h3{margin: 0;font-size: 1.875rem;line-height: 2;color: #003a81;font-weight: bold;}
+.admissions .zcz .elementor-image-box-content h3:hover{text-decoration: underline;}
 
 .application-requirements .atslider{background: rgba(0,132,203,0.8);}
-.application-requirements .text,.application-requirements li{font-size: 1rem;color: #58595b;margin-bottom: 1rem;}
+.application-requirements .text,.application-requirements li,.st .text{font-size: 1rem;color: #58595b;margin-bottom: 1rem;}
 .application-requirements .text span,.application-requirements li span{color: #70ae2e;}
 .application-requirements h2{display: inline-block;color: #003a81;font-size: 1.6rem;border-top: 2px solid #003a81;line-height: 2;margin: 2rem 0 0;}
 .application-requirements ul{margin: 2rem 0 0;}
@@ -484,7 +484,8 @@ body:not(.overlay-header) .primary-menu ul li{border-bottom:1px solid #b7d696;}
 .application-requirements .atslider{background: rgba(0,132,203,0.8);}
 .application-requirements .text,.application-requirements li{font-size: 1rem;color: #58595b;margin-bottom: 1rem;}
 .application-requirements .text span,.application-requirements li span{color: #70ae2e;}
-.application-requirements h2{display: inline-block;color: #003a81;font-size: 1.6rem;border-top: 2px solid #003a81;line-height: 2;margin: 2rem 0 0;}
+.application-requirements h2,.mr h2{display: inline-block;color: #003a81;font-size: 1.6rem;border-top: 2px solid #003a81;line-height: 2;margin: 2rem 0 0;}
+.tuition-international-students .mr h2{color: #aec707;border-top: 2px solid #aec707;}
 .application-requirements ul{margin: 2rem 0 0;}
 .application-requirements .title{color: #003a81;font-size: 1.125rem;line-height: 2;margin: 2rem 0 0;}
 .application-requirements .t2{color: #003a81;font-size: 1rem;margin:0 0 1rem;}
@@ -504,7 +505,6 @@ body:not(.overlay-header) .primary-menu ul li{border-bottom:1px solid #b7d696;}
 .scholarship-financial-aid .over li::before{content: '';position: absolute;left: -1.5em;width: 9px;height: 9px;border-radius: 5px;top: 0.5em;background-color: #003a81;}
 .scholarship-financial-aid .over li::after{content: '';position: absolute;left: calc(4px - 1.5em);top: 0.5em;width: 1px;height: 200%;background-color: #003a81;}
 .scholarship-financial-aid .over li span{position: absolute;left: -2.2em;top: 0;color: #003a81;font-size: 1.2rem;}
-#dukekunshan3 .scholarship-financial-aid .over li span{display: none;}
 .scholarship-financial-aid .second .over li::before{background-color: #70ad2d;}
 .scholarship-financial-aid .second .over li::after{background-color: #70ad2d;}
 .scholarship-financial-aid .second .over li span{color: #70ad2d;}
@@ -513,6 +513,28 @@ body:not(.overlay-header) .primary-menu ul li{border-bottom:1px solid #b7d696;}
 .scholarship-financial-aid .list li{padding: 0.5rem 1em;margin-bottom: 1rem;}
 .scholarship-financial-aid .list ul li:nth-child(2n+1){background: #eaf3e0;}
 .scholarship-financial-aid .list ul li .t{font-family: 'Hiragino-Sans-GB-W6';font-size: 1.1rem;font-weight: bold;}
+
+.financial-support .atslider{background: rgba(237,138,56,0.8);}
+.financial-support h2{display: inline-block;color: #003a81;font-size: 1.6rem;border-top: 2px solid #003a81;line-height: 2;margin: 0 0 1rem;}
+.financial-support .second h2{color: #70ad2d;border-top: 2px solid #70ad2d;}
+.financial-support .t2{color: #58595b;font-size: 1.1rem;margin:1rem 0 1rem;}
+.financial-support .over{padding-left: 3em;overflow: hidden;}
+.financial-support .over li{position:relative;margin-bottom: 0.5rem;}
+.financial-support .over li::before{content: '';position: absolute;left: -1.5em;width: 9px;height: 9px;border-radius: 5px;top: 0.5em;background-color: #003a81;}
+.financial-support .over li::after{content: '';position: absolute;left: calc(4px - 1.5em);top: 0.5em;width: 1px;height: 200%;background-color: #003a81;}
+.financial-support .over li span{position: absolute;left: -2.2em;top: 0;color: #003a81;font-size: 1.2rem;}
+#dukekunshan3 .financial-support.over li span{display: none;}
+.financial-support .second .over li::before{background-color: #70ad2d;}
+.financial-support .second .over li::after{background-color: #70ad2d;}
+.financial-support .second .over li span{color: #70ad2d;}
+.financial-support p.blue{color: #e18020;margin: 0 0 2em;text-align: center;}
+.financial-support .list{background: #d4e7c0;padding: 2em 1em;}
+.financial-support .list li{padding: 0.5rem 1em;margin-bottom: 1rem;}
+.financial-support .list ul li:nth-child(2n+1){background: #eaf3e0;}
+.financial-support .list ul li .t{font-family: 'Hiragino-Sans-GB-W6';font-size: 1.1rem;font-weight: bold;}
+
+
+
 .tlist .list{background: #d4e7c0;padding: 2em 1em;}
 .tlist .list li{padding: 0.5rem 1em;margin-bottom: 1rem;}
 .tlist .list ul li:nth-child(2n+1){background: #eaf3e0;}
@@ -542,30 +564,30 @@ tqu
 .sliden .elementor-container{width: 100%;max-width: inherit!important;}
 .atslider{position: absolute;left: 0;width: 26vw;height: 26vw;top: -29vw;background: rgba(104,191,29,0.8);z-index: 1;}
 .atslider>div{position: absolute;left: -2vw;width: 26vw;height: 26vw;top: -2vw;border: 1px solid #fff;}
-.atslider>div p.text{color: #fff!important;font-size: 2.7vw;line-height: 1;position: absolute;left: 14%;top: 67%;font-weight: bold;}
+.atslider>div p.text{color: #fff!important;font-size: 2.7vw;line-height: 1.1;position: absolute;left: 14%;bottom: 10%;font-weight: bold;}
 #dukekunshan1 .atslider>div p.text{font-size: 3.5vw;}
 .atslider>div p span{font-size: 5vw;}
 .header-inner .toggle.mobile-lan-toggle{display: none;}
 
-#dukekunshan3 .scholarship-financial-aid .elementor-widget-container p{margin-bottom: 1rem;}
-#dukekunshan3 .scholarship-financial-aid .over li{margin-bottom: 1rem;color: #003a81;}
+#dukekunshan3 .financial-support .elementor-widget-container p{margin-bottom: 1rem;}
+#dukekunshan3 .financial-support .over li{margin-bottom: 1rem;color: #003a81;}
 #dukekunshan3 .elementor-element-2f7eed5 p,#dukekunshan3 .elementor-element-2f7eed5 p a{color: #aec707;}
 #dukekunshan3 .elementor-element-2f7eed5 p img{width: 2rem;display: inline-block;margin-right: 2rem;vertical-align: middle;}
 #dukekunshan3 .s1 .elementor-text-editor p:first-child{position: relative;}
 #dukekunshan3 .s1 .t1 .elementor-text-editor p:first-child:before{content: '';position: absolute;left: -1rem;top: 0;width: 4px;height: 100%;background: #003a81;}
 
-#dukekunshan3 .application-requirements .st p{color: #aec707;}
-#dukekunshan3 .application-requirements .st p a{color: #aec707;}
-#dukekunshan3 .application-requirements .st p img{width: 2rem;display: inline-block;margin: 0 2rem 0 0;vertical-align: middle;}
-#dukekunshan3 .application-requirements h2{margin: 2rem 0;}
+#dukekunshan3 .st p{color: #aec707;}
+#dukekunshan3 .st p a{color: #aec707;}
+#dukekunshan3 .st p img{width: 2rem;display: inline-block;margin: 0 2rem 0 0;vertical-align: middle;}
+#dukekunshan3 .application-requirements h2,.mr h2{margin: 2rem 0;}
 #dukekunshan3 .application-requirements .elementor-element.elementor-element-4c8ebc9b{margin: 0 0 3rem;}
 #dukekunshan3 .elementor-element-4977e0e3{width: 70%;}
 #dukekunshan3 .application-requirements .elementor-element.elementor-element-4c8ebc9b p:first-child{position: relative;}
-#dukekunshan3 .scholarship-sources .elementor-element-45a68405 p:first-child:before{content: '';position: absolute;left: -1rem;top: 0;width: 4px;height: 100%;background: #003a81;margin-bottom: 1rem;}
-#dukekunshan3 .scholarship-sources .elementor-col-100 p:first-child{position: relative;margin-bottom: 0; }
-#dukekunshan3 .scholarship-sources .elementor-col-100 .elementor-element-45a68405 p:first-child:before{content: '';position: absolute;left: -1rem;top: 0;width: 4px;height: 100%;background: #003a81;margin-bottom: 1rem;}
-#dukekunshan3 .qualities-we-look-for-in-a-successful-candidate .elementor-element-41cd1650 p:first-child{position: relative;margin-bottom: 2rem; }
-#dukekunshan3 .qualities-we-look-for-in-a-successful-candidate .elementor-element-41cd1650 p:first-child:before{content: '';position: absolute;left: -1rem;top: 0;width: 4px;height: 100%;background: #003a81;margin-bottom: 1rem;}
+#dukekunshan3 .scholarship-sources .s2 p:first-child:before{content: '';position: absolute;left: -1rem;top: 0;width: 4px;height: 100%;background: #003a81;margin-bottom: 1rem;}
+#dukekunshan3 .scholarship-sources .s2 .elementor-col-100 p:first-child{position: relative;margin-bottom: 0; }
+#dukekunshan3 .scholarship-sources .s2 p:first-child:before{content: '';position: absolute;left: -1rem;top: 0;width: 4px;height: 100%;background: #003a81;margin-bottom: 1rem;}
+#dukekunshan3 .qualities-we-look-for .elementor-element-41cd1650 p:first-child{position: relative;margin-bottom: 2rem; }
+#dukekunshan3 .qualities-we-look-for .elementor-element-41cd1650 p:first-child:before{content: '';position: absolute;left: -1rem;top: 0;width: 4px;height: 100%;background: #003a81;margin-bottom: 1rem;}
 
 #dukekunshan3 .tqu .elementor-text-editor p:first-child{position: relative;}
 #dukekunshan3 .tqu .elementor-text-editor p:first-child:before{content: '';position: absolute;left: -2rem;top: 0;width: 4px;height: 100%;background: #003a81;}
@@ -579,7 +601,7 @@ tqu
 #dukekunshan3 .tlist2 .list ul li:nth-child(2n) .t>span{color: #aec707;}
 .swiper-container-horizontal>.swiper-pagination-bullets{display: none;}
 
-.qualities-we-look-for-in-a-successful-candidate .atslider{background: rgba(0,130,201,0.8);}
+.qualities-we-look-for .atslider{background: rgba(0,130,201,0.8);}
 
 .visit-us .atslider>div p.text{top: initial;bottom: 10%;}
 .visit-us .v1 .h1{font-size: 1.5rem;font-weight: bold;color: #003a81;position: relative;margin-bottom: 1rem;}
@@ -602,17 +624,17 @@ tqu
 .visit-us .over2 .text{color: #ffa400;}
 .visit-us .over2 .text img{width: 2rem;display: inline-block;margin-right: 2rem;vertical-align: middle;}
 
-.merit-scholarships .v1 .h1{font-size: 1.5rem;font-weight: bold;color: #003a81;position: relative;margin-bottom: 1rem;}
-.merit-scholarships .v1 .h1:before{content: '';position: absolute;left: -2rem;top: 0;width: 4px;height: 100%;background: #003a81}
-.merit-scholarships .text{font-size: 1rem;color: #58595b;margin-bottom: 1rem;}
-.merit-scholarships .v2 .h1{font-size: 1.5rem;font-weight: bold;color: #70ae2e;border-top: 2px solid #70ae2e;display: inline-block;margin-bottom: 1rem;}
-.merit-scholarships .v3 .h1{font-size: 1.5rem;font-weight: bold;color: #ffa300;border-top: 2px solid #ffa300;display: inline-block;margin-bottom: 1rem;}
-.merit-scholarships .over{padding-left: 3em;overflow: hidden;}
-.merit-scholarships .over li{position:relative;margin-bottom: 1rem;}
-.merit-scholarships .over li span{position: absolute;left: -1.5em;top: 0;color: #a0c321;font-size: 1.5rem;line-height: 1;}
-.merit-scholarships .over li span:before{content: '0';}
-.merit-scholarships .v4 .h1{font-size: 1.5rem;font-weight: bold;color: #003a81;border-top: 2px solid #003a81;display: inline-block;margin-bottom: 1rem;}
-.merit-scholarships .atslider{background: rgba(233,134,56,0.8);}
+.merit-scholarships-need-based-financial-aid .v1 .h1{font-size: 1.5rem;font-weight: bold;color: #003a81;position: relative;margin-bottom: 1rem;}
+.merit-scholarships-need-based-financial-aid .v1 .h1:before{content: '';position: absolute;left: -2rem;top: 0;width: 4px;height: 100%;background: #003a81}
+.merit-scholarships-need-based-financial-aid .text{font-size: 1rem;color: #58595b;margin-bottom: 1rem;}
+.merit-scholarships-need-based-financial-aid .v2 .h1{font-size: 1.5rem;font-weight: bold;color: #70ae2e;border-top: 2px solid #70ae2e;display: inline-block;margin-bottom: 1rem;}
+.merit-scholarships-need-based-financial-aid .v3 .h1{font-size: 1.5rem;font-weight: bold;color: #ffa300;border-top: 2px solid #ffa300;display: inline-block;margin-bottom: 1rem;}
+.merit-scholarships-need-based-financial-aid .over{padding-left: 3em;overflow: hidden;}
+.merit-scholarships-need-based-financial-aid .over li{position:relative;margin-bottom: 1rem;}
+.merit-scholarships-need-based-financial-aid .over li span{position: absolute;left: -1.5em;top: 0;color: #a0c321;font-size: 1.5rem;line-height: 1;}
+.merit-scholarships-need-based-financial-aid .over li span:before{content: '0';}
+.merit-scholarships-need-based-financial-aid .v4 .h1{font-size: 1.5rem;font-weight: bold;color: #003a81;border-top: 2px solid #003a81;display: inline-block;margin-bottom: 1rem;}
+.merit-scholarships-need-based-financial-aid .atslider{background: rgba(233,134,56,0.8);}
 
 @media screen and (max-width: 1500px) {
     .elementor-32 .elementor-section.elementor-section-boxed > .elementor-container {max-width: 70%;}
@@ -650,19 +672,21 @@ tqu
     #site-footer .container .footer-column{width: inherit;}
     #site-footer .container .footer-col-1{width: initial;margin: 1rem 2rem;}
     #site-footer .container .content>li .sub-menu{display: none;}
-    #site-footer .container .content>li .sub-menu.sh{display: block;}
+    #site-footer .container .content>li.sh .sub-menu{display: block;}
     #site-footer .container .content>li>a{background: #70ae2e;line-height: 2;padding: 0 2rem;position: relative;}
     #site-footer .container .content>li>a:after{position: absolute;content: '';width: 1rem;height: 1rem;right: 1rem;top: 0.5rem;background: url(../images/15.png) no-repeat;background-size: 100% 100%;}
+    #site-footer .container .content>li.sh>a:after{background: url(../images/18.png) no-repeat;background-size: 100% 100%;}
     #site-footer .container .content>li .sub-menu{margin-bottom: 2rem;}
     #site-footer .container .content>li .sub-menu a{color: #58595b;margin-left: 2rem;}
     #site-footer .container .footer-column #menu-item-160,#site-footer .container .footer-column #menu-item-973{margin: 0;}
     #site-footer>.mobile{background: #003a81;padding: 1rem 0;}
     #site-footer .footer-logo img{width: 10rem;margin: 0 auto 1rem;}
     #site-footer #copyright{margin: 0;}
-    button.close-nav-toggle {padding: 2rem 0;}
-    .menu-modal.active .section-inner{width: calc(100% - 4rem);}
-    .modal-menu > li > .ancestor-wrapper > a {font-size: 1rem;padding: 1rem 1rem;color: #58595b;}
-    .modal-menu ul li a {padding: 1rem;}
+    .menu-modal.active .section-inner{width: 100%;}
+    .modal-menu{width: initial;left: initial;}
+    .menu-modal .section-inner .menu-top{background: url(../images/16.png) no-repeat;background-size: 100% 100%;}
+    .modal-menu > li > .ancestor-wrapper > a {font-size: 1rem;padding: 1rem 1rem 1rem 2rem;border-left: 8px solid #a2c521;color: #fff;}
+    .modal-menu ul li a {font-size: 1rem;padding: 1rem 1rem 1rem 2rem;border-left: 8px solid #a2c521;color: #fff;}
     .modal-menu ul li{border-left: 0;}
     .menu-bottom{padding: 1rem 0;}
     .menu-bottom svg{display: none;}
@@ -670,25 +694,28 @@ tqu
     .social-icons a span{width: inherit;height: inherit;position: relative!important;top: initial;clip-path: initial;}
     .header-titles-wrapper .lan{display: none;position: fixed;left: 0;top: 0;right: 0;bottom: 0;background: rgba(255,255,255,0.5);z-index: 999;}
     .header-titles-wrapper .lan li a{font-size: 1rem;padding: 1rem 1rem;color: #58595b;display: block;border-bottom: 1px solid #dcd7ca;background: #fff;text-align: left;font-weight: bold;}
+    button.close-nav-toggle {padding: 1rem 0;}
+    button.close-nav-toggle .toggle-text{display: none;}
+    button.close-nav-toggle svg{margin-right:2rem;color: #fff;}
 }
 
 @media screen and (max-width: 767px) {
-    .admission-main .zs .elementor-column:nth-child(2) .elementor-image-box-content h3{display: block;margin: -1rem 2rem 0 0;background: #8cbd31;text-align: left;font-size: 1rem;line-height: 2;padding-left: 1rem;line-height:3;}
-    .admission-main .zs .elementor-column:nth-child(2) .elementor-image-box-content h3 a{color: #fff;}
+    .admissions .zs .elementor-column:nth-child(2) .elementor-image-box-content h3{display: block;margin: -1rem 2rem 0 0;background: #8cbd31;text-align: left;font-size: 1rem;line-height: 2;padding-left: 1rem;line-height:3;}
+    .admissions .zs .elementor-column:nth-child(2) .elementor-image-box-content h3 a{color: #fff;}
     .elementor-628 .elementor-element.elementor-element-bf85491.elementor-position-top .elementor-image-box-img{margin: 0;}
     .elementor-628 .elementor-element.elementor-element-588405a.elementor-position-top .elementor-image-box-img{margin: 0;}
-    .admission-main .ws .elementor-column:first-child .elementor-image-box-content h3{display: block;margin: -1rem 2rem 0 0;background: #ffab00;text-align: left;font-size: 1rem;line-height: 2;padding-left: 1rem;line-height:3;}
-    .admission-main .ws .elementor-column:first-child .elementor-image-box-content h3 a{color: #fff;}
-    .admission-main .xf .elementor-image-box-content h3{background: #8cbd31;margin: -1rem 2rem 0 0;font-size:1rem;line-height:3;padding-left: 1rem;}
-    .admission-main .xf .elementor-column:nth-child(2) .elementor-image-box-content h3{background: #ffab00;margin: -1rem 2rem 0 0;}
-    .admission-main .zcz .elementor-image-box-content h3{display: block;margin: -1rem 2rem 0 0;background: #ffab00;text-align: left;font-size: 1rem;line-height: 2;padding-left: 1rem;line-height:3;}
-    #dukekunshan3 .admission-main .zcz .elementor-image-box-content h3{margin: -1rem 0 0;line-height: 1;padding: 1rem 0.5rem;}
-    .admission-main .zcz .elementor-row .elementor-column:first-child h3,.admission-main .zcz .elementor-row .elementor-column:nth-child(2) h3{background: #8cbd31;}
-    .admission-main .zcz .elementor-row .elementor-column:first-child,.admission-main .zcz .elementor-row .elementor-column:nth-child(2){width: 50%;}
-    .admission-main .zcz .elementor-image-box-content h3 a{color: #fff;}
-    .admission-main .zcz .elementor-image-box-content h3 a:hover{text-decoration: none;}
+    .admissions .ws .elementor-column:first-child .elementor-image-box-content h3{display: block;margin: -1rem 2rem 0 0;background: #ffab00;text-align: left;font-size: 1rem;line-height: 2;padding-left: 1rem;line-height:3;}
+    .admissions .ws .elementor-column:first-child .elementor-image-box-content h3 a{color: #fff;}
+    .admissions .xf .elementor-image-box-content h3{background: #8cbd31;margin: -1rem 2rem 0 0;font-size:1rem;line-height:3;padding-left: 1rem;}
+    .admissions .xf .elementor-column:nth-child(2) .elementor-image-box-content h3{background: #ffab00;margin: -1rem 2rem 0 0;}
+    .admissions .zcz .elementor-image-box-content h3{display: block;margin: -1rem 2rem 0 0;background: #ffab00;text-align: left;font-size: 1rem;line-height: 2;padding-left: 1rem;line-height:3;}
+    #dukekunshan3 .admissions .zcz .elementor-image-box-content h3{margin: -1rem 0 0;line-height: 1;padding: 1rem 0.5rem;}
+    .admissions .zcz .elementor-row .elementor-column:first-child h3,.admissions .zcz .elementor-row .elementor-column:nth-child(2) h3{background: #8cbd31;}
+    .admissions .zcz .elementor-row .elementor-column:first-child,.admissions .zcz .elementor-row .elementor-column:nth-child(2){width: 50%;}
+    .admissions .zcz .elementor-image-box-content h3 a{color: #fff;}
+    .admissions .zcz .elementor-image-box-content h3 a:hover{text-decoration: none;}
     .elementor-628 .elementor-element.elementor-element-d9805e0.elementor-position-top .elementor-image-box-img{margin: 0;}
-    #dukekunshan3 .admission-main .zcz .elementor-element-d9805e0 .elementor-image-box-content h3{margin: -1rem 2rem 0 0;}
+    #dukekunshan3 .admissions .zcz .elementor-element-d9805e0 .elementor-image-box-content h3{margin: -1rem 2rem 0 0;}
     .atslider{right: 0;left: inherit;bottom: -2em;top: initial;}
     .atslider>div{border: 0;}
     .application-requirements .sqyq img{display: none;}
@@ -717,11 +744,16 @@ tqu
     .scholarship-financial-aid h2{margin: 2rem 0;border: 0;background: #003a81;display: block;color: #fff;padding: 0 1rem;position: relative;}
     .scholarship-financial-aid h2:after{content: '';position: absolute;right: 1rem;top: 0.8rem;height: 1.6rem;width: 1.6rem;margin: 0;border: 0;background: url(../images/13.png) no-repeat;background-size: 100% 100%;}
     .scholarship-financial-aid .second h2{background: #70ae2e;color: #fff;}
-    #dukekunshan3 .scholarship-financial-aid .second h2{display: none;}
     .scholarship-financial-aid .over li::before,.scholarship-financial-aid .over li::after{content: none;}
-    #dukekunshan3 .scholarship-financial-aid .over li::before,#dukekunshan3 .scholarship-financial-aid .over li::after{content: '';}
     .scholarship-financial-aid .over li span:before {content: '0';}
-    #dukekunshan3 .scholarship-financial-aid .over li span{display: none;}
+    .financial-support h2{margin: 2rem 0;border: 0;background: #003a81;display: block;color: #fff;padding: 0 1rem;position: relative;}
+    .financial-support h2:after{content: '';position: absolute;right: 1rem;top: 0.8rem;height: 1.6rem;width: 1.6rem;margin: 0;border: 0;background: url(../images/13.png) no-repeat;background-size: 100% 100%;}
+    .financial-support .second h2{background: #70ae2e;color: #fff;}
+    .financial-support.second h2{display: none;}
+    .financial-support .over li::before,.financial-support .over li::after{content: none;}
+    .financial-support.over li::before,.financial-support.over li::after{content: '';}
+    .financial-support .over li span:before {content: '0';}
+    #dukekunshan3 .financial-support.over li span{display: none;}
     .download .at>div>div{border: 0;}
     .download .at>div{left: initial;top: initial;right: 2rem;bottom: -2rem;}
     .download .center{margin: 3rem 2rem 2rem;background: none;padding: 0;max-width: inherit;}
@@ -779,13 +811,13 @@ tqu
     .contact-us .ls .in{margin: 1rem;}
     .contact-us .ls .in:nth-child(3){margin: 0 1rem 1rem;}
     .elementor-element-24bc064{margin: 0;}
-    .why-duke-kunshan .c5 .elementor-widget-wrap>.elementor-element{width: 50%;}
-    .why-duke-kunshan .li{height: 8rem;}
-    #dukekunshan3 .why-duke-kunshan .li{height: initial;}
-    #dukekunshan3 .why-duke-kunshan .c5 .elementor-widget{margin-bottom: 20px;}
-    .why-duke-kunshan .li p strong{font-size: 2rem;}
-    .why-duke-kunshan .li p:first-child{font-size: 1rem;}
-    .why-duke-kunshan .li p.text{font-size: 0.875rem;}
+    .c5 .elementor-widget-wrap>.elementor-element{width: 50%;}
+    .c5 .li{height: 8rem;}
+    #dukekunshan3 .c5 .li{height: initial;}
+    #dukekunshan3 .c5 .elementor-widget{margin-bottom: 20px;}
+    .c5 .li p strong{font-size: 2rem;}
+    .c5 .li p:first-child{font-size: 1rem;}
+    .c5 .li p.text{font-size: 0.875rem;}
     #dukekunshan1 .elementor-element-24bc064,#dukekunshan3 .elementor-element-dd78bbd{margin: 0;}
     .why-duke-kunshan .xz{padding: 1rem 2rem;}
     #dukekunshan1 .why-duke-kunshan .xz p:first-child{font-size: 1.4rem;text-align: center;display: block;line-height:2;}
@@ -870,15 +902,15 @@ tqu
     #dukekunshan3 .application-requirements .over>ul>li::after{content: none;}
     #dukekunshan3 .application-requirements .over>ul>li::before{width: 3px;height: 3px;top: 0.6rem;left: 0;background: #58595b;}
     #dukekunshan3 .application-requirements .over>ul>li li::before{content: none;}
-    #dukekunshan3 .application-requirements .st p{color: #e18020;border-bottom:1px solid #003a81;}
-    #dukekunshan3 .application-requirements .st p a{color: #e18020;}
-    #dukekunshan3 .application-requirements .st p img{display: none;}
+    #dukekunshan3 .st p{color: #e18020;border-bottom:1px solid #003a81;}
+    #dukekunshan3 .st p a{color: #e18020;}
+    #dukekunshan3 .st p img{display: none;}
     #dukekunshan3 .s1 .t1 .elementor-text-editor p:first-child:before{content: none;}
     #dukekunshan3 .s1 .t1 .elementor-text-editor p:first-child{border-bottom: 1px solid #70ae2e;text-align: center;padding-bottom: 1rem;}
     #dukekunshan3 .s1 .elementor-text-editor p:nth-child(2){text-align: center!important;font-size: 1.2rem!important;}
-    #dukekunshan3 .scholarship-financial-aid .second .elementor-widget-container p{color: #70ae2e;border:1px solid #70ae2e;border-radius: 4px;margin-bottom: 1rem;line-height: 1.2;text-align: center;padding: 1rem;}
-    #dukekunshan3 .scholarship-financial-aid .second .elementor-widget-container p a{color: #70ae2e;}
-    #dukekunshan3 .scholarship-financial-aid .second .elementor-widget-container p img{display: none;}
+    #dukekunshan3 .financial-support.second .elementor-widget-container p{color: #70ae2e;border:1px solid #70ae2e;border-radius: 4px;margin-bottom: 1rem;line-height: 1.2;text-align: center;padding: 1rem;}
+    #dukekunshan3 .financial-support.second .elementor-widget-container p a{color: #70ae2e;}
+    #dukekunshan3 .financial-support.second .elementor-widget-container p img{display: none;}
     #dukekunshan3 .scholarship-sources .s2 .elementor-col-100 p:first-child{text-align: center;border-bottom: 1px solid #70ae2e;padding-bottom: 1rem;}
     #dukekunshan3 .scholarship-sources .s2 .elementor-col-100 p:first-child:before{content: none!important;}
     #dukekunshan3 .scholarship-sources .tlist .list{background: none;padding: 0;}
@@ -902,8 +934,8 @@ tqu
     .visit-us .over2 .text,.visit-us .videobox .elementor-widget-container .video .CtaButton{color: #fff;background:#a6bf07;border-radius: 4px;margin-bottom: 1rem;line-height: 1.2;text-align: center;padding: 1rem;}
     .visit-us .videobox .elementor-widget-container .video .CtaButton span{display: none;}
     .visit-us .videobox .elementor-widget-container .video .CtaButton{position: relative;display: block;left: initial;}
-    .merit-scholarships .v1 .h1{color: #70ae2e;}
-    .merit-scholarships .v1 .h1:before{left: -1rem;background: #70ae2e;}
+    .merit-scholarships-need-based-financial-aid .v1 .h1{color: #70ae2e;}
+    .merit-scholarships-need-based-financial-aid .v1 .h1:before{left: -1rem;background: #70ae2e;}
 }
 
 @media screen and (max-width: 500px) {
@@ -911,4 +943,10 @@ tqu
 }
 @media screen and (max-width: 352px) {
     #dukekunshan3 .bkxy .elementor-column:first-child .elementor-text-editor p.title{line-height: 1.5;}
+    .header-inner .search-toggle{right: 4rem;}
+    .header-inner .lan-toggle{right: 6rem;}
+    .header-titles-wrapper{width: 8rem;}
+    .duke1 .elementor-text-editor p:nth-child(2) {font-size: 2rem!important;}
+    .xzdk .elementor-widget-container p.title{font-size: 2rem;}
+    .xzdk .elementor-widget-container p.title span{font-size: 3rem;}
 }

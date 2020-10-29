@@ -90,13 +90,15 @@
 					var a =$(this).attr('src');
 					$(this).attr('src',$(this).attr('src').replace("_2.jpg",".jpg"));
 				});
-				$('.videobox .elementor-widget-container .video .CtaButton').click(function(){
-					$(this).hide();$('.video video').trigger('play');
-				});
 				$('#site-footer .container .content>li>a').click(function(e){
-					$('#site-footer .container .content>li .sub-menu').removeClass('sh');
-					$(this).next().addClass('sh');
-					e.preventDefault();
+					if($(this).parent().hasClass('sh')){
+						$('#site-footer .container .content>li').removeClass('sh');
+					}else{
+						$('#site-footer .container .content>li').removeClass('sh');
+						$(this).parent().addClass('sh');
+						e.preventDefault();
+					}
+
 				});
 				$('.lanicon').click(function(){
 					$(".header-titles-wrapper .lan").toggle();

@@ -17,12 +17,18 @@ $blog_id = get_current_blog_id();
 
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 		<?php wp_head(); ?>
 		<link href="<?php bloginfo('template_directory'); ?>/assets/css/swiper.min.css" rel="stylesheet">
 		<link href="<?php bloginfo('template_directory'); ?>/assets/css/style.css" rel="stylesheet">
-    	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.5.1.min.js" type='text/javascript'></script>
-    	<script src="<?php bloginfo('template_directory'); ?>/assets/js/swiper.min.js" type='text/javascript'></script>
+		<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.5.1.min.js" type='text/javascript'></script>
+		<script src="<?php bloginfo('template_directory'); ?>/assets/js/swiper.min.js" type='text/javascript'></script>
+		<script src="<?php bloginfo('template_directory'); ?>/assets/js/drupal.js" type='text/javascript'></script>
+		<script src="<?php bloginfo('template_directory'); ?>/assets/js/ajax.js" type='text/javascript'></script>
+		<script src="<?php bloginfo('template_directory'); ?>/assets/js/new-custom.js" type='text/javascript'></script>
+		<script src="<?php bloginfo('template_directory'); ?>/assets/js/js2" type='text/javascript'></script>
+		<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.5.1.min.js" type='text/javascript'></script>
 	</head>
 
 	<body <?php body_class(); ?> id="dukekunshan<?php echo $blog_id; ?>">
