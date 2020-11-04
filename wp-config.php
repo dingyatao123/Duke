@@ -20,6 +20,14 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+
+define( 'AS3CF_SETTINGS', serialize( array(
+    'provider' => 'aws',
+    'access-key-id' => 'AKIAR533PBHXLE6YLD6Z',
+    'secret-access-key' => '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',
+) ) );
+
+
 define( 'DB_NAME', 'dukekunshan' );
 
 /** MySQL database username */

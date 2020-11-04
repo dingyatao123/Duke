@@ -19,16 +19,15 @@ $blog_id = get_current_blog_id();
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 		<link rel="profile" href="https://gmpg.org/xfn/11">
+		<!--网页标题左侧显示-->
+		<link rel="icon" href="<?php bloginfo('template_directory'); ?>/assets/images/icon.ico" type="image/x-icon">
+		<!--收藏夹显示图标-->
+		<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/assets/images/icon.ico" type="image/x-icon">
 		<?php wp_head(); ?>
 		<link href="<?php bloginfo('template_directory'); ?>/assets/css/swiper.min.css" rel="stylesheet">
 		<link href="<?php bloginfo('template_directory'); ?>/assets/css/style.css" rel="stylesheet">
 		<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.5.1.min.js" type='text/javascript'></script>
 		<script src="<?php bloginfo('template_directory'); ?>/assets/js/swiper.min.js" type='text/javascript'></script>
-		<script src="<?php bloginfo('template_directory'); ?>/assets/js/drupal.js" type='text/javascript'></script>
-		<script src="<?php bloginfo('template_directory'); ?>/assets/js/ajax.js" type='text/javascript'></script>
-		<script src="<?php bloginfo('template_directory'); ?>/assets/js/new-custom.js" type='text/javascript'></script>
-		<script src="<?php bloginfo('template_directory'); ?>/assets/js/js2" type='text/javascript'></script>
-		<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.5.1.min.js" type='text/javascript'></script>
 	</head>
 
 	<body <?php body_class(); ?> id="dukekunshan<?php echo $blog_id; ?>">
@@ -66,7 +65,7 @@ $blog_id = get_current_blog_id();
 						</ul>
 						<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
 							<div><img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/3.png" /></div>
-							<input class="searchInput" type="text" value="<?php if($blog_id==3){echo 'Search';}else{echo '搜索';} ?>" name="s" id="s"/>
+							<input class="searchInput" type="text" placeholder="<?php if($blog_id==3){echo 'Search';}else{echo '搜索';} ?>" name="s" id="s"/>
 						</form>
 
 						<script type="text/javascript">

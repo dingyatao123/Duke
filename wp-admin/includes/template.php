@@ -2500,6 +2500,13 @@ function _wp_admin_html_begin() {
 >
 <head>
 <meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php echo get_option( 'blog_charset' ); ?>" />
+<!--网页标题左侧显示-->
+<link rel="icon" href="<?php bloginfo('template_directory'); ?>/assets/images/icon.ico" type="image/x-icon">
+<!--收藏夹显示图标-->
+<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/assets/images/icon.ico" type="image/x-icon">
+<style>
+	#wpadminbar #wp-admin-bar-wp-logo>.ab-item .ab-icon:before{background: url(<?php bloginfo('template_directory'); ?>/assets/images/icon.ico) no-repeat;background-size: 100% 100%;content: ''!important;width: 20px;height: 20px;display: block;}
+</style>
 	<?php
 }
 

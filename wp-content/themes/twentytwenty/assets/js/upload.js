@@ -273,6 +273,72 @@ jQuery(document).ready(function(){
         wp.media.editor.open();
         return false;
     });
+    jQuery('.banner25_bt').click(function()
+    {
+        var send_attachment_bkp = wp.media.editor.send.attachment;
+        wp.media.editor.send.attachment = function(props, attachment) {
+            jQuery('.banner25_img').attr('src', attachment.url);
+            jQuery('.banner25').val(attachment.url);
+            wp.media.editor.send.attachment = send_attachment_bkp;
+        }
+        wp.media.editor.open();
+        return false;
+    });
+    jQuery('.banner26_bt').click(function()
+    {
+        var send_attachment_bkp = wp.media.editor.send.attachment;
+        wp.media.editor.send.attachment = function(props, attachment) {
+            jQuery('.banner26_img').attr('src', attachment.url);
+            jQuery('.banner26').val(attachment.url);
+            wp.media.editor.send.attachment = send_attachment_bkp;
+        }
+        wp.media.editor.open();
+        return false;
+    });
+    jQuery('.banner27_bt').click(function()
+    {
+        var send_attachment_bkp = wp.media.editor.send.attachment;
+        wp.media.editor.send.attachment = function(props, attachment) {
+            jQuery('.banner27_img').attr('src', attachment.url);
+            jQuery('.banner27').val(attachment.url);
+            wp.media.editor.send.attachment = send_attachment_bkp;
+        }
+        wp.media.editor.open();
+        return false;
+    });
+    jQuery('.banner28_bt').click(function()
+    {
+        var send_attachment_bkp = wp.media.editor.send.attachment;
+        wp.media.editor.send.attachment = function(props, attachment) {
+            jQuery('.banner28_img').attr('src', attachment.url);
+            jQuery('.banner28').val(attachment.url);
+            wp.media.editor.send.attachment = send_attachment_bkp;
+        }
+        wp.media.editor.open();
+        return false;
+    });
+    jQuery('.banner29_bt').click(function()
+    {
+        var send_attachment_bkp = wp.media.editor.send.attachment;
+        wp.media.editor.send.attachment = function(props, attachment) {
+            jQuery('.banner29_img').attr('src', attachment.url);
+            jQuery('.banner29').val(attachment.url);
+            wp.media.editor.send.attachment = send_attachment_bkp;
+        }
+        wp.media.editor.open();
+        return false;
+    });
+    jQuery('.banner30_bt').click(function()
+    {
+        var send_attachment_bkp = wp.media.editor.send.attachment;
+        wp.media.editor.send.attachment = function(props, attachment) {
+            jQuery('.banner30_img').attr('src', attachment.url);
+            jQuery('.banner30').val(attachment.url);
+            wp.media.editor.send.attachment = send_attachment_bkp;
+        }
+        wp.media.editor.open();
+        return false;
+    });
     jQuery('.bannerpdf_bt').click(function()
     {
         var send_attachment_bkp = wp.media.editor.send.attachment;
@@ -429,6 +495,42 @@ jQuery(document).ready(function(){
     {
         jQuery('.banner24_img').attr('src', '/wp-content/uploads/nopic.jpg');
         jQuery('.banner24').val('');
+        return false;
+    });
+    jQuery('.cancel25').click(function()
+    {
+        jQuery('.banner25_img').attr('src', '/wp-content/uploads/nopic.jpg');
+        jQuery('.banner25').val('');
+        return false;
+    });
+    jQuery('.cancel26').click(function()
+    {
+        jQuery('.banner26_img').attr('src', '/wp-content/uploads/nopic.jpg');
+        jQuery('.banner26').val('');
+        return false;
+    });
+    jQuery('.cancel27').click(function()
+    {
+        jQuery('.banner27_img').attr('src', '/wp-content/uploads/nopic.jpg');
+        jQuery('.banner27').val('');
+        return false;
+    });
+    jQuery('.cancel28').click(function()
+    {
+        jQuery('.banner28_img').attr('src', '/wp-content/uploads/nopic.jpg');
+        jQuery('.banner28').val('');
+        return false;
+    });
+    jQuery('.cancel29').click(function()
+    {
+        jQuery('.banner29_img').attr('src', '/wp-content/uploads/nopic.jpg');
+        jQuery('.banner29').val('');
+        return false;
+    });
+    jQuery('.cancel30').click(function()
+    {
+        jQuery('.banner30_img').attr('src', '/wp-content/uploads/nopic.jpg');
+        jQuery('.banner30').val('');
         return false;
     });
     jQuery('.cancelpdf').click(function()

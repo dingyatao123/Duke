@@ -106,7 +106,21 @@
 				$('.header-titles-wrapper .lan').click(function(){
 					$(this).toggle();
 				});
-			});
+				//菜单栏始终浮动在顶部
+				var navH = $("#site-header").offset().top;//获取要定位元素距离浏览器顶部的距离
+				//滚动条事件
+				$(window).scroll(function(){
+						//获取滚动条的滑动距离
+						var scroH = $(this).scrollTop();
+						//滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定
+						if(scroH>navH){
+							$("#site-header").css({"position":"fixed","top":0,"left":0, "z-index":1000, "margin":"0 auto", "width":"100%"});
+						}else if(scroH<=navH){
+							$("#site-header").css({"position":"relative","margin":"0 auto"});
+						}
+						//console.log(scroH==navH);
+					});
+				});
 		</script>
 	</body>
 </html>

@@ -7,7 +7,12 @@
  *
  * @package WordPress
  */
-
+$http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https' : 'http';
+if($http_type=='http'){
+    header("HTTP/1.1 301 Moved Permanently");
+    header('Location:https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+    exit();
+}
 /** Make sure that the WordPress bootstrap has run before continuing. */
 require __DIR__ . '/wp-load.php';
 
@@ -90,6 +95,11 @@ function login_header( $title = 'Log In', $message = '', $wp_error = null ) {
 	<head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 	<title><?php echo $login_title; ?></title>
+	<!--网页标题左侧显示-->
+	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/assets/images/icon.ico" type="image/x-icon">
+	<!--收藏夹显示图标-->
+	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/assets/images/icon.ico" type="image/x-icon">
+	<?php wp_head(); ?>
 	<?php
 
 	wp_enqueue_style( 'login' );
