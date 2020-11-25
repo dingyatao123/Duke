@@ -874,6 +874,20 @@ function display_page_review_meta_box($magazine_review){
 		echo '<br>';
 		echo '<button class ="cancel9" style = "width: 100px; height: 30px;  "/>Cancel</button>';
 		echo '<br><br>';
+		echo 'wechat<br>';
+		$banner = esc_html( get_post_meta( $magazine_review->ID, 'banner25', true ) );
+		echo '<input class="banner25" type="hidden" name="banner25" value="' .  esc_attr($banner).'">';
+		if (!empty($banner)){
+			echo '<img class="banner25_img" src="' .  esc_attr($banner).'" style="width:100px; height:100px" />';
+		}
+		else{
+			echo '<img class="banner25_img" style="width:100px; height:100px" src= "'.site_url().'/wp-content/uploads/nopic.jpg"  />';
+		}
+		echo '<br>';
+		echo '<button class ="banner25_bt" style = "width: 100px; height: 30px;margin-bottom: 5px;"/>Upload image</button>';
+		echo '<br>';
+		echo '<button class ="cancel25" style = "width: 100px; height: 30px;  "/>Cancel</button>';
+		echo '<br><br>';
 
 		echo 'Image: (***×100)';
 		echo '<br><ul>';
@@ -1078,6 +1092,9 @@ function add_magazine_review_fields($magazine_review_id, $magazine_review){
                 update_post_meta($magazine_review_id, 'banner'.$i, $_POST['banner'.$i]);
             }
         }
+		if (isset($_POST['banner25'])) {
+			update_post_meta($magazine_review_id, 'banner25', $_POST['banner25']);
+		}
 	}elseif($magazine_review->ID==187){
         if (isset($_POST['title0'])) {
             update_post_meta($magazine_review_id, 'title0', $_POST['title0']);

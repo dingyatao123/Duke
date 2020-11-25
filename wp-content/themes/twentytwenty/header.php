@@ -27,11 +27,22 @@ $blog_id = get_current_blog_id();
 		<link href="<?php bloginfo('template_directory'); ?>/assets/css/swiper.min.css" rel="stylesheet">
 		<link href="<?php bloginfo('template_directory'); ?>/assets/css/style.css" rel="stylesheet">
 		<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.5.1.min.js" type='text/javascript'></script>
+		<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-migrate-3.0.1.min.js" type='text/javascript'></script>
 		<script src="<?php bloginfo('template_directory'); ?>/assets/js/swiper.min.js" type='text/javascript'></script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-TWCR3S9');</script>
+		<!-- End Google Tag Manager -->
 	</head>
 
 	<body <?php body_class(); ?> id="dukekunshan<?php echo $blog_id; ?>">
-
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWCR3S9"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<?php
 		wp_body_open();
 		?>
@@ -41,9 +52,13 @@ $blog_id = get_current_blog_id();
 				<div class="cont">
 					<div class="lf">
 						<div>
-							<img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/1.png" /></div> <?php if($blog_id==3){echo 'English – International Students';}else{echo '中文 – 国内';} ?> <div><img class="sq" src="<?php bloginfo('template_directory'); ?>/assets/images/2.png" />
+							<img class="earch" src="<?php bloginfo('template_directory'); ?>/assets/images/1.png" />
+						</div> 
+						<?php if($blog_id==3){echo 'English – International Students';}else{echo '中文 – 中国学生';} ?> 
+						<div>
+							<img class="sq" src="<?php bloginfo('template_directory'); ?>/assets/images/2.png" />
 							<ul>
-								<li><a href="/">中文 – 国内</a></li>
+								<li><a href="/">中文 – 中国学生</a></li>
 								<li><a href="/en">English – International Students</a></li>
 							</ul>
 						</div>
@@ -113,7 +128,7 @@ $blog_id = get_current_blog_id();
 					</button><!-- .nav-toggle -->
 					<div class="lan">
 						<ul>
-							<li><a href="/">中文 – 国内</a></li>
+							<li><a href="/">中文 – 中国学生</a></li>
 							<li><a href="/en">English – International Students</a></li>
 						</ul>
 					</div>
@@ -197,7 +212,47 @@ $blog_id = get_current_blog_id();
 			?>
 
 		</header><!-- #site-header -->
-
+		<?php if($blog_id==3){ ?> 
+			<div class="enicon">
+				<ul>
+					<li>
+						<a href="/en">
+							<img src="https://duke.s3.cn-northwest-1.amazonaws.com.cn/wp-content/uploads/sites/3/2020/11/10134626/202.png">
+							<div>
+								<img src="https://duke.s3.cn-northwest-1.amazonaws.com.cn/wp-content/uploads/sites/3/2020/11/10134648/206.png">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://apply.dukekunshan.edu.cn/portal/iem_events" target="_blank">
+							<img src="https://duke.s3.cn-northwest-1.amazonaws.com.cn/wp-content/uploads/sites/3/2020/11/10134630/203.png">
+							<div>
+								<img src="https://duke.s3.cn-northwest-1.amazonaws.com.cn/wp-content/uploads/sites/3/2020/11/10134827/207.png">
+								<p>Register for a virtual visit</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://apply.dukekunshan.edu.cn/portal/iem_events" target="_blank">
+							<img src="https://duke.s3.cn-northwest-1.amazonaws.com.cn/wp-content/uploads/sites/3/2020/11/10134634/204.png">
+							<div>
+								<img src="https://duke.s3.cn-northwest-1.amazonaws.com.cn/wp-content/uploads/sites/3/2020/11/10134655/208.png">
+								<p>Register for an info session</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://apply.dukekunshan.edu.cn/register/ConnectWithUs" target="_blank">
+							<img src="https://duke.s3.cn-northwest-1.amazonaws.com.cn/wp-content/uploads/sites/3/2020/11/10153207/210.png">
+							<div>
+								<img src="https://duke.s3.cn-northwest-1.amazonaws.com.cn/wp-content/uploads/sites/3/2020/11/10153211/211.png">
+								<p>Join our mailing list</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		<?php } ?> 
 		<?php
 		// Output the menu modal.
 		get_template_part( 'template-parts/modal-menu' );

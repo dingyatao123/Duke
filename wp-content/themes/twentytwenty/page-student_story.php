@@ -34,7 +34,7 @@ get_header();
 				<div class="tt"><?php the_title(); ?></div>
 				<div class="ex"><?php the_excerpt(); ?></div>
 				<div class="in"><?php echo get_post_meta( $post->ID, 'intro', true ); ?></div>
-				<a class="CtaButton" href="<?php the_permalink(); ?>" style="font-size: 1rem;">了解更多<span class="CtaButton-arrow DirectionalArrow DirectionalArrow--right"></span></a>				
+				<a class="CtaButton" href="<?php the_permalink(); ?>" style="font-size: 1rem;">阅读全文<span class="CtaButton-arrow DirectionalArrow DirectionalArrow--right"></span></a>				
 			</li>
 		<?php if($i%4==3){ ?>
 			<div class="clear"></div>
